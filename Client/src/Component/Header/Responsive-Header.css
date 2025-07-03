@@ -1,0 +1,81 @@
+@media (min-width: 431px) and (max-width: 1024px) {
+
+    header .main-section {
+        border-radius: 20px;
+    } 
+
+    nav .navbar-bg {
+        display: none;
+    }
+
+    nav .navbar-sm {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        
+        min-height: 6vh;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-sm h1 {
+        font-size: 20px;
+        font-style: oblique;
+
+        align-items: center;
+        justify-items: center;
+    }
+
+    .crossIcon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .menuIcon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    header .main-section {
+        border-radius: 19px;
+    }
+    
+    nav .navbar-bg {
+        display: none;
+    }
+
+    nav .navbar-sm {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        min-height: 8vh;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-sm h1 {
+        font-family: 'Segoe UI', -apple-system, Tahoma;
+        font-size: 20px;
+        font-style: oblique;
+
+        align-items: center;
+        justify-items: center;
+    }
+
+    .crossIcon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .menuIcon {
+        width: 24px;
+        height: 24px;
+    }
+}

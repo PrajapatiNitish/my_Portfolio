@@ -1,0 +1,21 @@
+@media (min-width: 431px) and (max-width: 1024px) {
+    .intro .intro-lg-screen {
+        display: none;
+    }
+
+    .intro .intro-sm-screen {
+        display: flex;
+    }
+}
+
+@media (max-width: 430px) {
+
+    /* Large screen content display none. */
+    .intro .intro-lg-screen {
+        display: none;
+    }
+
+    .intro .intro-sm-screen {
+        display: flex;
+    }
+}
