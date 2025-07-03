@@ -62,6 +62,12 @@ export default function Main() {
 
                     {/* Mini details about my achievement sections. */}
                     <div className='achievements'>
+                        <div className='achievement-header'>
+                            <h2>
+                                Achievements
+                            </h2>
+                        </div>
+
                         <div className='about-achievement'>
                             <p>The journey since childhood, I have achieved lots of achievements but These three are memorable moments for me.</p>
                         </div>

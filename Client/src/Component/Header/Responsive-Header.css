@@ -28,12 +28,7 @@
         justify-items: center;
     }
 
-    .crossIcon {
-        width: 24px;
-        height: 24px;
-    }
-
-    .menuIcon {
+    .icon {
         width: 24px;
         height: 24px;
     }
@@ -69,12 +64,7 @@
         justify-items: center;
     }
 
-    .crossIcon {
-        width: 24px;
-        height: 24px;
-    }
-
-    .menuIcon {
+    .icon {
         width: 24px;
         height: 24px;
     }
