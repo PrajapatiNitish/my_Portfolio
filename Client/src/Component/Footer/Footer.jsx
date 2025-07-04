@@ -129,17 +129,17 @@ export default function Footer() {
                             <div className="social-media">
                                 <h3>Connect with me</h3>
                                 <MediaLink
-                                    link={""}
+                                    link={"https://www.instagram.com/prajapati.nitish8/"}
                                     linkName={"Instagram"}
                                 />
 
                                 <MediaLink
-                                    link={""}
+                                    link={"https://x.com/ernitish45"}
                                     linkName={"X"}
                                 />
 
                                 <MediaLink
-                                    link={""}
+                                    link={"https://www.linkedin.com/in/nitish-kumar-4ab304262/"}
                                     linkName={"Linked In"}
                                 />
 
@@ -153,12 +153,12 @@ export default function Footer() {
                                 <h3>Code</h3>
 
                                 <MediaLink
-                                    link={""}
+                                    link={"https://github.com/PrajapatiNitish"}
                                     linkName={"GitHub"}
                                 />
 
                                 <MediaLink
-                                    link={""}
+                                    link={"https://leetcode.com/u/Prajapatinitsh8/"}
                                     linkName={"Leetcode"}
                                 />
                             </div>
@@ -167,17 +167,17 @@ export default function Footer() {
                                 <h3>Work with me</h3>
 
                                 <MediaLink
-                                    link={""}
+                                    link={"https://www.fiverr.com/prajapatinitish?public_mode=true"}
                                     linkName={"Fiverr"}
                                 />
 
                                 <MediaLink
-                                    link={""}
+                                    link={"https://www.upwork.com/freelancers/~01100b915d97d63834"}
                                     linkName={"Upwork"}
                                 />
 
                                 <MediaLink
-                                    link={""}
+                                    link={"https://www.freelancer.in/u/prajapatinitish8"}
                                     linkName={"Freelancer"}
                                 />
                             </div>
@@ -186,7 +186,7 @@ export default function Footer() {
                                 <h3>Download</h3>
 
                                 <MediaLink
-                                    link={""}
+                                    link={"https://drive.google.com/drive/folders/1vfmkhUNi3GL-_1IBBggbbv3OabDdciV3?usp=drive_link"}
                                     linkName={"Resume"}
                                 />
                             </div>
