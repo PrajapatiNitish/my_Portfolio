@@ -46,7 +46,7 @@ main {
 .intro-lg-screen .img-lg #lg-screen-img {
     height: 75vh;
 
-    filter: drop-shadow(3px 1px 5px rgba(134, 134, 134, 0.784));
+    /* filter: drop-shadow(3px 1px 5px rgba(134, 134, 134, 0.784)); */
 }
 
 .intro-lg-screen .intro-content-lg {
@@ -83,6 +83,7 @@ main {
 
     align-items: center;
     gap: 7px;
+    
 }
 
 .intro-sm-screen .img-sm {
@@ -95,6 +96,8 @@ main {
 
     border: 1px solid rgba(176, 176, 176, 0.808);
     border-radius: 19px;
+
+    box-shadow: 6px 2px 5px rgba(158, 158, 158, 0.668);
 }
 
 .intro-sm-screen #sm-screen-img {
@@ -102,7 +105,7 @@ main {
 
     padding-top: 2rem;
 
-    filter: drop-shadow(3px 1px 5px rgba(134, 134, 134, 0.784));
+    /* filter: drop-shadow(3px 1px 5px rgba(134, 134, 134, 0.784)); */
 }
 
 .intro-sm-screen .intro-content-sm {
@@ -116,12 +119,15 @@ main {
 
     border: 1px solid rgba(176, 176, 176, 0.808);
     border-radius: 19px;
+
+    box-shadow: 6px 4px 5px rgba(158, 158, 158, 0.668);
 }
 
 .intro-content-sm .welcome-msg-sm {
     width: 100%;
     font-size: 30px;
     font-weight: bold;
+    
 }
 
 .intro-content-sm .welcome-msg-sm p {

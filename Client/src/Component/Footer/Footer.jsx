@@ -4,11 +4,42 @@ import './Responsive-Footer.css';
 import MediaLink from '../Media-Link/Media-Link';
 
 export default function Footer() {
-    let [footerIcon, setfooterIcon] = useState(false);
+    // let changeIconArr = ["connectWithMe", "programming", "workWithMe", "download"];
+    
+    // let [footerIcon, setFooterIcon] = useState(false);
 
-    let changeIcon = () => {
-        setfooterIcon(!footerIcon)
+    let [connectWithMe, setConnectWithMe] = useState(false);
+    let [programming, setProgramming] = useState(false);
+    let [workWithMe, setWorkWithMe] = useState(false);
+    let [download, setDownload] = useState(false);
+
+
+
+    let changeConnectWithMeIcon = () => {
+        // setFooterIcon(!footerIcon)
+
+        setConnectWithMe(!connectWithMe)
     }
+
+    let changeProgrammingIcon = () => {
+        // setFooterIcon(!footerIcon)
+
+        setProgramming(!programming)
+    }
+
+    let changeWorkWithMeIcon = () => {
+        // setFooterIcon(!footerIcon)
+
+        setWorkWithMe(!workWithMe)
+    }
+
+    let changeDownloadIcon = () => {
+        // setFooterIcon(!footerIcon)
+
+        setDownload(!download)
+    }
+
+    
     return (
         <>
             <footer>
@@ -22,18 +53,18 @@ export default function Footer() {
                                         <h3>Connect to me</h3>
                                     </div>
 
-                                    <span className='footerIcon' onClick={changeIcon}>
+                                    <span className='footerIcon connectWithMe' onClick={changeConnectWithMeIcon}>
                                         {
-                                            footerIcon ?
+                                            connectWithMe ?
 
-                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" className='up'>
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className='up'>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
                                                 </svg>)
 
                                                 :
 
-                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" className='down'>
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className='down'>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                                 </svg>)
                                         }
                                     </span>
@@ -50,18 +81,18 @@ export default function Footer() {
                                         <h3>Programming</h3>
                                     </div>
 
-                                    <span className='footerIcon' onClick={changeIcon}>
+                                    <span className='footerIcon programming' onClick={changeProgrammingIcon}>
                                         {
-                                            footerIcon ?
+                                            programming ?
 
-                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" className='up'>
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className='up'>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
                                                 </svg>)
 
                                                 :
 
-                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" className='down'>
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className='down'>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                                 </svg>)
                                         }
                                     </span>
@@ -74,18 +105,18 @@ export default function Footer() {
                                         <h3>Work with me</h3>
                                     </div>
 
-                                    <span className='footerIcon' onClick={changeIcon}>
+                                    <span className='footerIcon workWithMe' onClick={changeWorkWithMeIcon}>
                                         {
-                                            footerIcon ?
+                                            workWithMe ?
 
-                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" className='up'>
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className='up'>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
                                                 </svg>)
 
                                                 :
 
-                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" className='down'>
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className='down'>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                                 </svg>)
                                         }
                                     </span>
@@ -98,18 +129,18 @@ export default function Footer() {
                                         <h3>Download</h3>
                                     </div>
 
-                                    <span className='footerIcon' onClick={changeIcon}>
+                                    <span className='footerIcon download' onClick={changeDownloadIcon}>
                                         {
-                                            footerIcon ?
+                                            download ?
 
-                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" className='up'>
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className='up'>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
                                                 </svg>)
 
                                                 :
 
-                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" className='down'>
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                                (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className='down'>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                                 </svg>)
                                         }
                                     </span>
