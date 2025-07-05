@@ -15,7 +15,7 @@ export default function Header() {
                     <nav>
                         <div className='navbar-bg'>
                             <span>
-                                <h1>NitishPrajapati</h1>
+                                <h1>Nitish Prajapati</h1>
                             </span>
                             <span>
                                 Skills
@@ -36,7 +36,7 @@ export default function Header() {
 
                         <div className='navbar-sm'>
                             <span>
-                                <h1>NitishPrajapati</h1>
+                                <h1>Nitish Prajapati</h1>
                             </span>
                             <span className='headerIcon' onClick={changeIcon} >
 

@@ -19,7 +19,7 @@ export default function Footer() {
                             <div className="connect-with-me view-footer-slide">
                                 <div className='connect-head'>
                                     <div>
-                                        <h3>Connect with me</h3>
+                                        <h3>Connect to me</h3>
                                     </div>
 
                                     <span className='footerIcon' onClick={changeIcon}>
@@ -127,7 +127,7 @@ export default function Footer() {
 
                         <div className="connect">
                             <div className="social-media">
-                                <h3>Connect with me</h3>
+                                <h3>Connect to me</h3>
                                 <MediaLink
                                     link={"https://www.instagram.com/prajapati.nitish8/"}
                                     linkName={"Instagram"}

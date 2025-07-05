@@ -81,7 +81,7 @@ export default function Main() {
                             />
 
                             <Achievement 
-                                head={"Achievement - 3"} 
+                                head={"Achievement - 2"} 
                                 content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa molestiae nam harum facere sunt aliquam? Dolorem, reiciendis, adipisci iste accusantium repudiandae quidem sunt amet soluta ut, cupiditate nam deleniti?"} 
                                 link={"none"} 
                                 linkName={"View Image"}
