@@ -1,0 +1,21 @@
+.skills-content {
+    display: flex;
+    flex-direction: column;
+
+    margin: 8px;
+    padding: 10px 12px;
+
+
+    border: 0.5px solid rgb(168, 168, 168);
+    border-radius: 20px;
+
+    box-shadow: 0 1px 5px rgba(158, 158, 158, 0.668);
+}
+
+.skills-content .content-header {
+    width: 100%;
+}
+
+.content-header h3 {
+    margin: 8px;
+}

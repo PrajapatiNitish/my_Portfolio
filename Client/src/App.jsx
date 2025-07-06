@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './Component/Header/Header.jsx';
-import Main from './Main/Main.jsx';
+import Main from './Pages/Main/Main.jsx';
+import Skills from './Pages/Skills/Skills.jsx';
 import Footer from './Component/Footer/Footer.jsx';
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
   return (
     <>
       <Header />
-      <Main />
+      {/* <Main /> */}
+      <Skills />
       <Footer />
     </>
   )

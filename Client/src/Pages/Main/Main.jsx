@@ -1,6 +1,6 @@
 import './Main.css';
 import './Responsive-Main.css';
-import Achievement from '../Component/Achievement/Achievements';
+import Achievement from '../../Component/Achievement/Achievements';
 
 export default function Main() {
     return (

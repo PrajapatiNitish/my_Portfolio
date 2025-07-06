@@ -4,10 +4,6 @@ import './Responsive-Footer.css';
 import MediaLink from '../Media-Link/Media-Link';
 
 export default function Footer() {
-    // let changeIconArr = ["connectWithMe", "programming", "workWithMe", "download"];
-    
-    // let [footerIcon, setFooterIcon] = useState(false);
-
     let [connectWithMe, setConnectWithMe] = useState(false);
     let [programming, setProgramming] = useState(false);
     let [workWithMe, setWorkWithMe] = useState(false);
@@ -16,30 +12,22 @@ export default function Footer() {
 
 
     let changeConnectWithMeIcon = () => {
-        // setFooterIcon(!footerIcon)
-
         setConnectWithMe(!connectWithMe)
     }
 
     let changeProgrammingIcon = () => {
-        // setFooterIcon(!footerIcon)
-
         setProgramming(!programming)
     }
 
     let changeWorkWithMeIcon = () => {
-        // setFooterIcon(!footerIcon)
-
         setWorkWithMe(!workWithMe)
     }
 
     let changeDownloadIcon = () => {
-        // setFooterIcon(!footerIcon)
-
         setDownload(!download)
     }
 
-    
+
     return (
         <>
             <footer>

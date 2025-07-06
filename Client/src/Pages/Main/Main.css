@@ -35,7 +35,8 @@ main {
 
     align-items: end;
     justify-content: space-around;
-    box-shadow: 6px 4px 5px rgba(158, 158, 158, 0.668);
+    
+    box-shadow: 0px 2px 5px rgba(60, 60, 60, 0.668);
 }
 
 .intro-lg-screen .img-lg {

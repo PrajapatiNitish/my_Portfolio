@@ -1,0 +1,10 @@
+@media (min-width: 431px) and (max-width: 915px) {
+
+}
+
+@media (max-width: 430px) {
+    .skills-sub-div .skills-content-div {
+        display: flex;
+        flex-direction: column;
+    }
+}
