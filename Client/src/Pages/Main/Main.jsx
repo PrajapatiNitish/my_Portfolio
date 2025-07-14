@@ -1,6 +1,8 @@
 import './Main.css';
 import './Responsive-Main.css';
 import Achievement from '../../Component/Achievement/Achievements';
+import Educations from '../../Component/Education/Education';
+import Form from '../../Component/Form/Form';
 
 export default function Main() {
     return (
@@ -73,26 +75,52 @@ export default function Main() {
                         </div>
 
                         <div className='achievements-content'>
-                            <Achievement 
-                                head={"Achievement - 1"} 
-                                content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa molestiae nam harum facere sunt aliquam? Dolorem, reiciendis, adipisci iste accusantium repudiandae quidem sunt amet soluta ut, cupiditate nam deleniti?"} 
-                                link={"none"} 
+                            <Achievement
+                                head={"Achievement - 1"}
+                                content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa molestiae nam harum facere sunt aliquam? Dolorem, reiciendis, adipisci iste accusantium repudiandae quidem sunt amet soluta ut, cupiditate nam deleniti?"}
+                                link={"none"}
                                 linkName={"View Image"}
                             />
 
-                            <Achievement 
-                                head={"Achievement - 2"} 
-                                content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa molestiae nam harum facere sunt aliquam? Dolorem, reiciendis, adipisci iste accusantium repudiandae quidem sunt amet soluta ut, cupiditate nam deleniti?"} 
-                                link={"none"} 
+                            <Achievement
+                                head={"Achievement - 2"}
+                                content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa molestiae nam harum facere sunt aliquam? Dolorem, reiciendis, adipisci iste accusantium repudiandae quidem sunt amet soluta ut, cupiditate nam deleniti?"}
+                                link={"none"}
                                 linkName={"View Image"}
                             />
 
-                            <Achievement 
-                                head={"Achievement - 3"} 
-                                content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa molestiae nam harum facere sunt aliquam? Dolorem, reiciendis, adipisci iste accusantium repudiandae quidem sunt amet soluta ut, cupiditate nam deleniti?"} 
-                                link={"none"} 
+                            <Achievement
+                                head={"Achievement - 3"}
+                                content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa molestiae nam harum facere sunt aliquam? Dolorem, reiciendis, adipisci iste accusantium repudiandae quidem sunt amet soluta ut, cupiditate nam deleniti?"}
+                                link={"none"}
                                 linkName={"View Image"}
                             />
+                        </div>
+                    </div>
+
+                    <div className="education-div">
+                        <div className="education-header">
+                            <h2>Educations</h2>
+                        </div>
+
+                        <div className='educations'>
+                            <Educations educationHead={'Education-1'} educationContent={'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio doloribus quae fugit earum in nesciunt corporis necessitatibus cupiditate voluptatibus qui? Labore quasi dolore, odit ad exercitationem nobis saepe minus aut!'} />
+
+                            <Educations educationHead={'Education-1'} educationContent={'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio doloribus quae fugit earum in nesciunt corporis necessitatibus cupiditate voluptatibus qui? Labore quasi dolore, odit ad exercitationem nobis saepe minus aut!'} />
+                        </div>
+                    </div>
+
+                    <div className='feedback-div'>
+                        <div className="feedback-content-div">
+                            <div className="feedback-head">
+                                <h1>Give me your valueable feedback.</h1>
+                            </div>
+                        </div>
+
+                        <div className="feedback-content-div">
+                            <div className="feedback-content">
+                                <Form />
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,7 @@ export default function Skills() {
             <div className="skills-main-div">
                 <div className="skills-sub-div">
                     <div className='skills-header'>
-                        <h3>Skills</h3>
+                        <h2>Skills</h2>
                     </div>
 
                     <div className="skills-content-div">

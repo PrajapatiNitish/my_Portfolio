@@ -6,6 +6,15 @@
     .intro .intro-sm-screen {
         display: flex;
     }
+
+    .feedback-head h1 {
+        margin: 0 0 0 3rem;
+        font-size: 45px;
+    }
+
+    .feedback-content {
+        width: 90%;
+    }
 }
 
 @media (max-width: 430px) {
@@ -17,5 +26,27 @@
 
     .intro .intro-sm-screen {
         display: flex;
+    }
+
+    .feedback-div {
+        flex-direction: column;
+    }
+
+    .feedback-content-div {
+        width: 100%;
+        margin: 1rem 0rem;
+    }
+
+    .feedback-head {
+        width: 100%;
+    }
+
+    .feedback-head h1 {
+        margin: 0 0 0 0.5rem;
+        font-size: 30px;
+    }
+
+    .feedback-content {
+        width: 100%;
     }
 }

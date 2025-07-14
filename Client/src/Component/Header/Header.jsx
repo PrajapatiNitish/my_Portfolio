@@ -26,9 +26,9 @@ export default function Header() {
                             <span>
                                 Internship
                             </span>
-                            <span>
+                            {/* <span>
                                 Educations
-                            </span>
+                            </span> */}
                             <span>
                                 Achievments
                             </span>

@@ -28,7 +28,7 @@ main {
     width: 100%;
     min-height: 70vh;
     border-radius: 25px;
-    border: 1px solid rgba(182, 182, 182, 0.832);
+    border: 0.5px solid rgba(182, 182, 182, 0.832);
 
     display: flex;
     flex-direction: row;
@@ -36,7 +36,7 @@ main {
     align-items: end;
     justify-content: space-around;
     
-    box-shadow: 0px 2px 5px rgba(60, 60, 60, 0.668);
+    box-shadow: 2px 3px 5px rgba(100, 100, 100, 0.668);
 }
 
 .intro-lg-screen .img-lg {
@@ -46,8 +46,6 @@ main {
 
 .intro-lg-screen .img-lg #lg-screen-img {
     height: 75vh;
-
-    /* filter: drop-shadow(3px 1px 5px rgba(134, 134, 134, 0.784)); */
 }
 
 .intro-lg-screen .intro-content-lg {
@@ -73,7 +71,7 @@ main {
     width: 75%;
     font-size: 12px;
 
-    border-bottom: 1px solid rgba(167, 167, 167, 0.86);
+    border-bottom: 0.5px solid rgb(200, 200, 200);
 }
 
 /* Small screen Display none for large screen. */
@@ -95,7 +93,7 @@ main {
 
     justify-content: center;
 
-    border: 1px solid rgba(176, 176, 176, 0.808);
+    border: 0.5px solid rgba(176, 176, 176, 0.808);
     border-radius: 19px;
 
     box-shadow: 6px 2px 5px rgba(158, 158, 158, 0.668);
@@ -139,7 +137,7 @@ main {
     width: 100%;
     font-size: 13px;
 
-    border-bottom: 1px solid rgba(167, 167, 167, 0.86);
+    border-bottom: 0.5px solid rgba(167, 167, 167, 0.86);
 }
 
 /* Styling achievements section. */
@@ -152,7 +150,7 @@ main {
     flex-direction: column;
     gap: 15px;
 
-    border: 1px solid rgba(176, 176, 176, 0.808);
+    border: 0.5px solid rgba(176, 176, 176, 0.808);
     border-radius: 19px;
 
     align-items: center;
@@ -177,4 +175,59 @@ main {
     flex-direction: column;
     gap: 5px;
     padding: 1rem 0 1.5rem 0;
+}
+
+/*  Styling Educations sections*/
+.education-div {
+    background-color: rgb(255, 255, 255);
+
+    width: 100%;
+
+    border-radius: 25px;
+    border: 0.5px solid rgba(182, 182, 182, 0.832);
+    box-shadow: 3px 4px 5px rgba(132, 132, 132, 0.668);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.educations {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 1rem 0 1.5rem 0;
+}
+
+/* Styling Feedback section. */
+.feedback-div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+}
+
+.feedback-content-div {
+    width: 50%;
+    margin: 2rem 0;
+}
+
+.feedback-head {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-head h1 {
+    margin:0 0 0 6rem;
+    font-size: 50px;
+}
+
+.feedback-content {
+    width: 80%;
 }

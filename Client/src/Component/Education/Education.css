@@ -1,4 +1,4 @@
-.Achievement-content-div {
+.education-content {
     width: 100%;
 
     display: flex;
@@ -10,20 +10,16 @@
     border-bottom: 1px solid rgba(167, 167, 167, 0.86);
 }
 
-.Achievement-content-div .head{
+.education-head {
     max-width: 100%;
 
     font-size: 20px;
     font-weight: bold;
 }
 
-.Achievement-content-div .content {
+.education {
     max-width: 100%;
     overflow: hidden;
 
-    font-size: 14px;
-}
-
-.Achievement-content-div .link {
     font-size: 14px;
 }
