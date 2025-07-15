@@ -9,17 +9,14 @@
 
 .skills-sub-div {
     width: 90%;
-    background-color: white;
     
     display: flex;
     flex-direction: column;
     
     align-items: center;
     
-    border: 1px solid rgba(182, 182, 182, 0.832);
+    /* border: 0.5px solid rgba(182, 182, 182, 0.832); */
     border-radius: 20px;
-    
-    box-shadow: 6px 4px 5px rgba(158, 158, 158, 0.668);
 }
 
 .skills-sub-div .skills-header {

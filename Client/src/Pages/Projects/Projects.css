@@ -1,0 +1,27 @@
+.project-div {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    
+}
+
+.project-sub-div {
+    width: 90%;
+
+    /* border: 0.5px solid rgb(168, 168, 168); */
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin: 1rem;
+}
+
+.project {
+    padding: 1rem 3rem;
+}

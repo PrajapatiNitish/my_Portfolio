@@ -24,7 +24,7 @@ main {
 /* Styling the intro card of large screen */
 
 .intro-lg-screen {
-    background-color: rgba(255, 255, 255, 0.712);
+    background-color: rgba(255, 255, 255, 0.853);
     width: 100%;
     min-height: 70vh;
     border-radius: 25px;
@@ -35,8 +35,6 @@ main {
 
     align-items: end;
     justify-content: space-around;
-    
-    box-shadow: 2px 3px 5px rgba(100, 100, 100, 0.668);
 }
 
 .intro-lg-screen .img-lg {
@@ -86,7 +84,7 @@ main {
 }
 
 .intro-sm-screen .img-sm {
-    background-color: rgba(255, 255, 255, 0.712);
+    background-color: rgba(255, 255, 255, 0.832);
     width: 100%;
 
     display: flex;
@@ -95,20 +93,16 @@ main {
 
     border: 0.5px solid rgba(176, 176, 176, 0.808);
     border-radius: 19px;
-
-    box-shadow: 6px 2px 5px rgba(158, 158, 158, 0.668);
 }
 
 .intro-sm-screen #sm-screen-img {
     height: 50vh;
 
     padding-top: 2rem;
-
-    /* filter: drop-shadow(3px 1px 5px rgba(134, 134, 134, 0.784)); */
 }
 
 .intro-sm-screen .intro-content-sm {
-    background-color: rgba(255, 255, 255, 0.712);
+    background-color: rgba(255, 255, 255, 0.863);
 
     display: flex;
     flex-direction: column;
@@ -116,10 +110,8 @@ main {
 
     align-content: center;
 
-    border: 1px solid rgba(176, 176, 176, 0.808);
+    border: 0.5px solid rgba(176, 176, 176, 0.808);
     border-radius: 19px;
-
-    box-shadow: 6px 4px 5px rgba(158, 158, 158, 0.668);
 }
 
 .intro-content-sm .welcome-msg-sm {
@@ -143,19 +135,16 @@ main {
 /* Styling achievements section. */
 
 .achievements {
-    background-color: rgba(255, 255, 255, 0.712);
     width: 100%;
 
     display: flex;
     flex-direction: column;
     gap: 15px;
 
-    border: 0.5px solid rgba(176, 176, 176, 0.808);
+    /* border: 0.5px solid rgba(176, 176, 176, 0.808); */
     border-radius: 19px;
 
     align-items: center;
-
-    box-shadow: 6px 4px 5px rgba(158, 158, 158, 0.668);
 }
 
 .about-achievement {
@@ -179,13 +168,10 @@ main {
 
 /*  Styling Educations sections*/
 .education-div {
-    background-color: rgb(255, 255, 255);
-
     width: 100%;
 
     border-radius: 25px;
-    border: 0.5px solid rgba(182, 182, 182, 0.832);
-    box-shadow: 3px 4px 5px rgba(132, 132, 132, 0.668);
+    /* border: 0.5px solid rgba(182, 182, 182, 0.832); */
 
     display: flex;
     flex-direction: column;
