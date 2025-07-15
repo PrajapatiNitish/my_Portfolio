@@ -4,7 +4,7 @@ body {
   width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
-  background-color: rgba(247, 247, 247, 0.76);
+  background-color: rgba(247, 247, 247, 0.873);
 }
 
 :root {
@@ -15,15 +15,15 @@ body {
   align-items: center;
   justify-items: center;
 
-  width: 100%;
+  max-width: 1280px;
   height: 100%;
 }
 
 :root a {
-  color: rgb(122, 122, 122);
+  color: rgb(110, 110, 110);
   text-decoration: none;
 }
 
 :root a:hover {
-  color: rgb(45, 45, 45);
+  color: rgb(0, 0, 0);
 }

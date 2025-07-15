@@ -146,7 +146,7 @@ export default function Footer() {
 
                         <div className="connect">
                             <div className="social-media">
-                                <h3>Connect to me</h3>
+                                <h3>Social</h3>
                                 <MediaLink
                                     link={"https://www.instagram.com/prajapati.nitish8/"}
                                     linkName={"Instagram"}

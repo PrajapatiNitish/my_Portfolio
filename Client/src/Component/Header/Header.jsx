@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Header.css';
 import './Responsive-Header.css';
+import { Router, Route, Link, NavLink } from 'react-router-dom';
 
 export default function Header() {
     let [icon, setIcon] = useState(false);
@@ -8,6 +9,8 @@ export default function Header() {
     let changeIcon = () => {
         setIcon(!icon)
     }
+
+
     return (
         <>
             <header>
@@ -15,23 +18,35 @@ export default function Header() {
                     <nav>
                         <div className='navbar-bg'>
                             <span>
-                                <h1>Nitish Prajapati</h1>
+                                <NavLink to={'/'}>
+                                    <h1>Nitish Prajapati</h1>
+                                </NavLink>
                             </span>
                             <span>
-                                Skills
+                                {/* <Link to={"/Skills"}>
+                                    Skills
+                                </Link> */}
+
+                                <NavLink to={'/Skills'}>
+                                    Skills
+                                </NavLink>
                             </span>
                             <span>
-                                Projects
+                                <NavLink to={"/Projects"}>
+                                    Projects
+                                </NavLink>
                             </span>
                             <span>
-                                Internship
+                                <NavLink to={"/Internship"}>
+                                    Internship
+                                </NavLink>
                             </span>
                             {/* <span>
                                 Educations
                             </span> */}
-                            <span>
+                            {/* <span>
                                 Achievments
-                            </span>
+                            </span> */}
                         </div>
 
                         <div className='navbar-sm'>
