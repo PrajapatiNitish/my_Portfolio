@@ -7,15 +7,26 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependency folders
+node_modules/
+Client/node_modules/
+Server/node_modules/
 
-# Editor directories and files
-.vscode/*
+# Build output
+dist/
+dist-ssr/
+Client/dist/
+Server/dist/
+
+# Local environments
+*.local
+.env
+.env.*   # include Vite/Express-style environments
+
+# Editor/IDE
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
@@ -23,54 +34,5 @@ dist-ssr
 *.sln
 *.sw?
 
-#Client - specific
-# Logs
-Client/logs
-Client/*.log
-Client/npm-debug.log*
-Client/yarn-debug.log*
-Client/yarn-error.log*
-Client/pnpm-debug.log*
-Client/lerna-debug.log*
-
-Client/node_modules
-Client/dist
-Client/dist-ssr
-Client/*.local
-
-# Editor directories and files
-Client/.vscode/*
-Client/!.vscode/extensions.json
-Client/.idea
-Client/.DS_Store
-Client/*.suo
-Client/*.ntvs*
-Client/*.njsproj
-Client/*.sln
-Client/*.sw?
-
-#Client - specific
-# Logs
-Server/logs
-Server/*.log
-Server/npm-debug.log*
-Server/yarn-debug.log*
-Server/yarn-error.log*
-Server/pnpm-debug.log*
-Server/lerna-debug.log*
-
-Server/node_modules
-Server/dist
-Server/dist-ssr
-Server/*.local
-
-# Editor directories and files
-Server/.vscode/*
-Server/!.vscode/extensions.json
-Server/.idea
-Server/.DS_Store
-Server/*.suo
-Server/*.ntvs*
-Server/*.njsproj
-Server/*.sln
-Server
+# OS / Misc
+Thumbs.db
