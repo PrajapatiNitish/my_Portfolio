@@ -4,7 +4,26 @@ import Achievement from '../../Component/Achievement/Achievements';
 import Educations from '../../Component/Education/Education';
 import Form from '../../Component/Form/Form';
 
+import axios from 'axios';
+import { useState } from 'react';
+import { useEffect } from 'react';
+
 export default function Main() {
+    const [jokes, setJokes] = useState([]);
+
+
+    // Fatch data from backend
+    useEffect(() => {
+        axios.get('/api/jokes')
+        .then((res) => {
+            setJokes(res.data);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+    })
+
+
     return (
         <>
             <main>
