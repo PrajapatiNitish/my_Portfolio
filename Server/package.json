@@ -14,6 +14,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "method-override": "^3.0.0"
+    "method-override": "^3.0.0",
+    "mysql2": "^3.14.2"
   }
 }

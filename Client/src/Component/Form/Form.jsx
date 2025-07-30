@@ -3,12 +3,17 @@ import Button from "./Button/Button"
 import Textarea from "./Textarea/Textarea"
 import './Form.css'
 
-function Form() {
+function Form({ onSubmit }) {
     return (
-        <form className='form'>
+        <form className='form' onSubmit={onSubmit}>
             <Input
                 type={"text"}
-                placeholder={"Enter your name"} 
+                placeholder={"Your fullname"} 
+            />
+
+            <Input
+                type={"email"}
+                placeholder={"Your e-mail"} 
             />
 
             <Textarea text={"Write your feedback"}/>

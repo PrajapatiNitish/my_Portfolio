@@ -13,15 +13,15 @@ export default function Main() {
 
 
     // Fatch data from backend
-    useEffect(() => {
-        axios.get('/api/jokes')
-        .then((res) => {
-            setJokes(res.data);
-        })
-        .catch((err) => {
-            console.log(err);
-        })
-    })
+    // useEffect(() => {
+    //     axios.get('/api/jokes')
+    //     .then((res) => {
+    //         setJokes(res.data);
+    //     })
+    //     .catch((err) => {
+    //         console.log(err);
+    //     })
+    // })
 
 
     return (
@@ -84,9 +84,9 @@ export default function Main() {
                     {/* Mini details about my achievement sections. */}
                     <div className='achievements'>
                         <div className='achievement-header'>
-                            <h2>
+                            <h1>
                                 Achievements
-                            </h2>
+                            </h1>
                         </div>
 
                         <div className='about-achievement'>
@@ -119,7 +119,7 @@ export default function Main() {
 
                     <div className="education-div">
                         <div className="education-header">
-                            <h2>Educations</h2>
+                            <h1>Educations</h1>
                         </div>
 
                         <div className='educations'>
@@ -138,7 +138,7 @@ export default function Main() {
 
                         <div className="feedback-content-div">
                             <div className="feedback-content">
-                                <Form />
+                                <Form onSubmit={""}/>
                             </div>
                         </div>
                     </div>

@@ -34,12 +34,10 @@ const router = createBrowserRouter([
       },
     ]
   }
-])
+]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <BrowserRouter>
-    </BrowserRouter> */}
       <RouterProvider router={router} />
   </StrictMode>,
 )

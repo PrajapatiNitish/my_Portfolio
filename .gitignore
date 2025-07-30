@@ -22,6 +22,7 @@ Server/dist/
 *.local
 .env
 .env.*   # include Vite/Express-style environments
+Server/.env
 
 # Editor/IDE
 .vscode/

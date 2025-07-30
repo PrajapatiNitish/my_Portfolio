@@ -52,12 +52,12 @@ main {
     flex-direction: column;
 
     padding: 20px;
-    padding-bottom: 7rem;
+    padding-bottom: 3rem;
 }
 
 .intro-content-lg .welcome-msg-lg {
-    width: 75%;
-    font-size: 30px;
+    width: 90%;
+    font-size: 50px;
     font-weight: bold;
 }
 
@@ -66,7 +66,7 @@ main {
 }
 
 .intro-content-lg .about-myself-lg {
-    width: 75%;
+    width: 80%;
     font-size: 12px;
 
     border-bottom: 0.5px solid rgb(200, 200, 200);
