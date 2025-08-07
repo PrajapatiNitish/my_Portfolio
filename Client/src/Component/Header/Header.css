@@ -8,7 +8,9 @@ header {
     justify-items: center;
 
     position: sticky;
-    top: 10px;
+    z-index: 9999;
+    top: 5px;
+
 }
 
 header .main-section {

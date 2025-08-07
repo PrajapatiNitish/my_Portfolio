@@ -9,18 +9,17 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 export default function Main() {
-    const [jokes, setJokes] = useState([]);
 
 
     // Fatch data from backend
     // useEffect(() => {
-    //     axios.get('/api/jokes')
-    //     .then((res) => {
-    //         setJokes(res.data);
-    //     })
-    //     .catch((err) => {
-    //         console.log(err);
-    //     })
+    //     axios.get('/api/')
+    //         .then((res) => {
+    //             console.log("Data arrived")
+    //         })
+    //         .catch((err) => {
+    //             console.log(err);
+    //         })
     // })
 
 
@@ -31,48 +30,29 @@ export default function Main() {
 
                     {/* Introduction of myself div section. */}
                     <div className="intro">
-
-                        {/* For large screen. */}
-                        <div className="intro-lg-screen">
-                            <div className='img-lg'>
-                                <img src="./Screen_img.png" alt="lg_screen_img" id='lg-screen-img' />
-                            </div>
-
-                            <div className='intro-content-lg'>
-                                <div className='welcome-msg-lg'>
-                                    <p>
-                                        Welcome ! <br />
-
-                                        Let's Know about me.
-                                    </p>
-                                </div>
-
-                                <div className="about-myself-lg">
-                                    <p>
-                                        I am <b>Nitish Prajapati</b>. You are on my Profolio Website. You can know about me on this page, about my study, my achievements and career in programming world. A transition from Electrical Engg. to Software Devloper and many more.
-                                    </p>
+                        {/* Welcome msg card */}
+                        <div className="welcome">
+                            <div className="space">
+                                <div className="msg">
+                                    Let's Know about Me and my journey.
                                 </div>
                             </div>
                         </div>
 
-
-                        {/* For small screen */}
-
-                        <div className="intro-sm-screen">
-                            <div className='img-sm'>
-                                <img src="./Screen_img.png" alt="sm_screen_img" id='sm-screen-img' />
+                        {/* For large screen. */}
+                        <div className="intro-screen">
+                            <div className='img'>
+                                <img src="./Screen_img.png" alt="screen_img" id='screen-img' />
                             </div>
 
-                            <div className='intro-content-sm'>
-                                <div className='welcome-msg-sm'>
+                            <div className='intro-content'>
+                                <div className='welcome-msg'>
                                     <p>
-                                        Welcome ! <br />
-
-                                        Let's Know about me.
+                                        Hello !
                                     </p>
                                 </div>
 
-                                <div className="about-myself-sm">
+                                <div className="about-myself">
                                     <p>
                                         I am <b>Nitish Prajapati</b>. You are on my Profolio Website. You can know about me on this page, about my study, my achievements and career in programming world. A transition from Electrical Engg. to Software Devloper and many more.
                                     </p>
@@ -138,7 +118,7 @@ export default function Main() {
 
                         <div className="feedback-content-div">
                             <div className="feedback-content">
-                                <Form onSubmit={""}/>
+                                <Form onSubmit={""} />
                             </div>
                         </div>
                     </div>

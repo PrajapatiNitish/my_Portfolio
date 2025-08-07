@@ -1,12 +1,64 @@
 @media (min-width: 431px) and (max-width: 1024px) {
-    .intro .intro-lg-screen {
-        display: none;
+
+    /* Styling img and discription. */
+    .intro .intro-screen {
+        background-color: inherit;
+        flex-direction: column;
+
+        gap: 5px;
+
+        border: none;
     }
 
-    .intro .intro-sm-screen {
+    .intro-screen .img {
+        background: white;
+        width: 100%;
+        padding: 0;
+
         display: flex;
+        justify-content: center;
+
+        border: 0.5px solid rgb(208, 208, 208);
+        border-radius: 25px;
     }
 
+    .intro-screen .img #screen-img {
+        height: 50vh;
+        padding: 3rem 0 0 0;
+    }
+
+    .intro-screen .intro-content {
+        background: white;
+        width: 100%;
+        padding: 1rem 0;
+        padding-top: 1.5rem;
+
+        justify-items: center;
+
+        border: 0.5px solid rgb(208, 208, 208);
+        border-radius: 25px;
+    }
+
+    .intro-content .welcome-msg {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .intro-content .about-myself {
+        width: 95%;
+        padding: 0 1rem;
+        
+        border-bottom: none;
+    }
+
+    .intro-content .about-myself p{
+        padding-bottom: 1rem;
+
+        border-bottom: 0.5px solid rgb(200, 200, 200);
+    }
+
+
+    /* Styling Feedback */
     .feedback-head h1 {
         margin: 0 0 0 3rem;
         font-size: 45px;
@@ -18,16 +70,65 @@
 }
 
 @media (max-width: 430px) {
+/* Styling img and discription. */
+    .intro .intro-screen {
+        background-color: inherit;
+        flex-direction: column;
 
-    /* Large screen content display none. */
-    .intro .intro-lg-screen {
-        display: none;
+        gap: 7px;
+
+        border: none;
     }
 
-    .intro .intro-sm-screen {
+    .intro-screen .img {
+        background: white;
+        width: 100%;
+        padding: 0;
+
         display: flex;
+        justify-content: center;
+
+        border: 0.5px solid rgb(208, 208, 208);
+        border-radius: 25px;
     }
 
+    .intro-screen .img #screen-img {
+        height: 50vh;
+        padding: 3rem 0 0 0;
+    }
+
+    .intro-screen .intro-content {
+        background: white;
+        width: 100%;
+        padding: 1rem 0;
+        padding-top: 1.5rem;
+
+
+        align-content: center;
+
+        border: 0.5px solid rgb(208, 208, 208);
+        border-radius: 20px;
+    }
+
+    .intro-content .welcome-msg {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .intro-content .about-myself {
+        width: 91%;
+        padding: 0 1rem;
+
+        border-bottom: none;
+    }
+
+    .intro-content .about-myself p {
+        padding-bottom: 1rem;
+
+        border-bottom: 0.5px solid rgb(200, 200, 200);
+    }
+
+    /* Styling feedback */
     .feedback-div {
         flex-direction: column;
     }

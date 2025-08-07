@@ -15,10 +15,6 @@ app.use(express.urlencoded({ extended: true })); //Express can understand json f
 // Serve static file
 // app.use(express.static(path.join(__dirname, "client/dist")));
 
-app.get('/api/jokes', (req, res) => {
-    res.send("Hello from Backend!");
-})
-
 
 // Server is ready. Entry Point
 app.get('/', (req, res) => {

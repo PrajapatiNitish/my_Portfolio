@@ -23,113 +23,104 @@ main {
 
 /* Styling the intro card of large screen */
 
-.intro-lg-screen {
-    background-color: rgba(255, 255, 255, 0.853);
+/* Styling welcome msg */
+.welcome {
+    width: 100%;
+    margin-bottom: 1rem;
+    
+    display: flex;
+
+    justify-content: center;
+    align-content: center;
+}
+
+.space {
+    padding: 10px;
+    width: fit-content;
+}
+
+.msg {
+    width: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+    font-weight: 600;
+
+    border-right: 2px solid rgb(88, 88, 88);
+
+    animation: typing 5s steps(25) forwards, blink 0.9s ease infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+/* styling img and discription */
+.intro-screen {
+    background-color: rgb(255, 255, 255);
     width: 100%;
     min-height: 70vh;
-    border-radius: 25px;
-    border: 0.5px solid rgba(182, 182, 182, 0.832);
-
+    
+    
     display: flex;
     flex-direction: row;
-
+    
     align-items: end;
     justify-content: space-around;
+    
+    border: 0.5px solid rgb(208, 208, 208);
+    border-radius: 25px;
 }
 
-.intro-lg-screen .img-lg {
+.intro-screen .img {
     width: 50%;
-    padding: 3.5rem 2rem 0 6rem;
+    padding: 3rem 2rem 0 6rem;
 }
 
-.intro-lg-screen .img-lg #lg-screen-img {
-    height: 75vh;
+.intro-screen .img #screen-img {
+    height: 70vh;
 }
 
-.intro-lg-screen .intro-content-lg {
+.intro-screen .intro-content {
     width: 50%;
     display: flex;
     flex-direction: column;
 
     padding: 20px;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
 }
 
-.intro-content-lg .welcome-msg-lg {
+.intro-content .welcome-msg {
     width: 90%;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
 }
 
-.welcome-msg-lg p {
+.welcome-msg p {
     margin: 0;
 }
 
-.intro-content-lg .about-myself-lg {
+.intro-content .about-myself {
     width: 80%;
     font-size: 12px;
 
     border-bottom: 0.5px solid rgb(200, 200, 200);
-}
-
-/* Small screen Display none for large screen. */
-.intro .intro-sm-screen {
-    width: 100%;
-    display: none;
-    flex-direction: column;
-
-    align-items: center;
-    gap: 7px;
-    
-}
-
-.intro-sm-screen .img-sm {
-    background-color: rgba(255, 255, 255, 0.832);
-    width: 100%;
-
-    display: flex;
-
-    justify-content: center;
-
-    border: 0.5px solid rgba(176, 176, 176, 0.808);
-    border-radius: 19px;
-}
-
-.intro-sm-screen #sm-screen-img {
-    height: 50vh;
-
-    padding-top: 2rem;
-}
-
-.intro-sm-screen .intro-content-sm {
-    background-color: rgba(255, 255, 255, 0.863);
-
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem 1.2rem 1rem 1.2rem;
-
-    align-content: center;
-
-    border: 0.5px solid rgba(176, 176, 176, 0.808);
-    border-radius: 19px;
-}
-
-.intro-content-sm .welcome-msg-sm {
-    width: 100%;
-    font-size: 30px;
-    font-weight: bold;
-    
-}
-
-.intro-content-sm .welcome-msg-sm p {
-    margin: 0;
-}
-
-.intro-content-sm .about-myself-sm {
-    width: 100%;
-    font-size: 13px;
-
-    border-bottom: 0.5px solid rgba(167, 167, 167, 0.86);
 }
 
 /* Styling achievements section. */
@@ -140,8 +131,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
-    /* border: 0.5px solid rgba(176, 176, 176, 0.808); */
+    
     border-radius: 19px;
 
     align-items: center;
