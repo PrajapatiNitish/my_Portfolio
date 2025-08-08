@@ -118,7 +118,7 @@ export default function Main() {
 
                         <div className="feedback-content-div">
                             <div className="feedback-content">
-                                <Form onSubmit={""} />
+                                <Form onSubmit={() => console.log("Successful submit.")} />
                             </div>
                         </div>
                     </div>

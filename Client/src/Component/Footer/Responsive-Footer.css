@@ -1,67 +1,62 @@
-@media (min-width: 431px) and (max-width: 1024px) {
-    .connect-sm {
-        display: none;
-    }
-}
-
-
+/* styling for mobile. */
 @media (max-width: 430px) {
+
+    /* Style Name and address */
     .footer-content .content {
         display: flex;
         flex-direction: column;
-    }
 
-    .content .connect {
-        display: none;
+        gap: 16px;
     }
 
     .content .contact {
         width: 100%;
+
+        padding-bottom: 1rem;
+
+        border-bottom: 1px solid rgba(167, 167, 167, 0.86);
+        ;
     }
 
-    .connect-sm {
-        display: flex;
+    .contact .name {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .contact p {
+        font-size: 14px;
+    }
+
+    .content .connect {
+        width: 100%;
         flex-direction: column;
-
-        padding-bottom: 2rem;
     }
 
-    .connect-sm .connect-with-me {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .connect-sm .view-footer-slide {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .view-footer-slide .connect-content {
-        display: none;
-    }
-
-    .view-footer-slide .connect-head {
+    .connect .name_icon {
         display: flex;
         flex-direction: row;
 
-        justify-content: space-between;
         align-items: center;
-        
-        border-bottom: 1px solid rgba(167, 167, 167, 0.86);
-
+        justify-content: space-between;
     }
 
-    .connect-head svg {
-        width: 16px;
-        height: 16px;
+    .connect .link {
+        display: none;
     }
 
-    .connect-head h3 {
+    .connect .footerIcon {
+        display: flex;
+        width: 18px;
+        height: 18px;
+    }
+
+    .connect h3 {
         font-size: 15px;
-        font-weight: 400;
+        font-weight: 600;
     }
 
     .copyright {
         justify-content: start;
     }
+
 }

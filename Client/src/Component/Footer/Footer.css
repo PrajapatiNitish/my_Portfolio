@@ -25,9 +25,10 @@ footer {
     justify-content: center;
 }
 
-.connect .contact {
+.content .connect {
     width: 20%;
     display: flex;
+    flex-direction: row;
 }
 
 .contact p {
@@ -48,6 +49,10 @@ footer {
     justify-content: space-evenly;
 }
 
+.connect .footerIcon {
+    display: none;
+}
+
 .connect h3 {
     font-size: 12px;
     font-weight: 600;
@@ -61,8 +66,4 @@ footer {
     padding-top: 3rem;
 
     justify-content: center;
-}
-
-.connect-sm {
-    display: none;
 }
