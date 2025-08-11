@@ -18,16 +18,13 @@
 }
 
 @media (max-width: 430px) {
-    header {
-        position: fixed;
-    }
 
     .navbar .navigate-link {
         display: none;
     }
 
     .navbar .headerIcon {
-        display: flex;
+        display: contents;
     }
 
     .icon {

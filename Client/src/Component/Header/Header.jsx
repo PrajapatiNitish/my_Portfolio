@@ -22,6 +22,7 @@ export default function Header() {
                                     <h1>Nitish Prajapati</h1>
                                 </NavLink>
                             </span>
+                            
                             <span className='navigate-link'>
                                 <span>
                                     <NavLink to={'/Skills'}>
