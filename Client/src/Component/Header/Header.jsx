@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Header.css';
 import './Responsive-Header.css';
-import { Router, Route, Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
     let [icon, setIcon] = useState(false);
@@ -16,43 +16,30 @@ export default function Header() {
             <header>
                 <div className='main-section'>
                     <nav>
-                        <div className='navbar-bg'>
+                        <div className='navbar'>
                             <span>
                                 <NavLink to={'/'}>
                                     <h1>Nitish Prajapati</h1>
                                 </NavLink>
                             </span>
-                            <span>
-                                {/* <Link to={"/Skills"}>
-                                    Skills
-                                </Link> */}
+                            <span className='navigate-link'>
+                                <span>
+                                    <NavLink to={'/Skills'}>
+                                        Skills
+                                    </NavLink>
+                                </span>
+                                <span>
+                                    <NavLink to={"/Projects"}>
+                                        Projects
+                                    </NavLink>
+                                </span>
+                                <span>
+                                    <NavLink to={"/Internship"}>
+                                        Internship
+                                    </NavLink>
+                                </span>
+                            </span>
 
-                                <NavLink to={'/Skills'}>
-                                    Skills
-                                </NavLink>
-                            </span>
-                            <span>
-                                <NavLink to={"/Projects"}>
-                                    Projects
-                                </NavLink>
-                            </span>
-                            <span>
-                                <NavLink to={"/Internship"}>
-                                    Internship
-                                </NavLink>
-                            </span>
-                            {/* <span>
-                                Educations
-                            </span> */}
-                            {/* <span>
-                                Achievments
-                            </span> */}
-                        </div>
-
-                        <div className='navbar-sm'>
-                            <span>
-                                <h1>Nitish Prajapati</h1>
-                            </span>
                             <span className='headerIcon' onClick={changeIcon} >
 
                                 {
@@ -74,7 +61,6 @@ export default function Header() {
                                 }
                             </span>
                         </div>
-
                         <div className='about-navbar'>
 
                         </div>

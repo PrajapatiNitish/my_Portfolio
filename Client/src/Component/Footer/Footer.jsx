@@ -117,7 +117,7 @@ export default function Footer() {
 
                             <div className="work-with-me">
                                 <div className='name_icon'>
-                                    <span><h3>Work with me</h3></span>
+                                    <span><h3>Hire me</h3></span>
                                     <span className='footerIcon workWithMe' onClick={changeWorkWithMeIcon}>
                                         {
                                             workWithMe ?

@@ -14,6 +14,7 @@ header {
 }
 
 header .main-section {
+    width: 90%;
     background-color: rgba(255, 255, 255, 0.712);
     backdrop-filter: blur(5px);
 
@@ -23,8 +24,6 @@ header .main-section {
     border: 1px solid rgba(182, 182, 182, 0.832);
 
     justify-content: center;
-    width: 90%;
-
 }
 
 nav {
@@ -37,7 +36,7 @@ nav {
     align-items: center;
 }
 
-nav .navbar-bg {
+nav .navbar {
     width: 100%;
     min-height: 8vh;
     display: flex;
@@ -47,11 +46,7 @@ nav .navbar-bg {
     align-items: center;
 }
 
-nav .navbar-sm {
-    display: none;
-}
-
-.navbar-bg h1 {
+.navbar h1 {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     font-size: 20px;
     font-style: oblique;
@@ -62,9 +57,16 @@ nav .navbar-sm {
     justify-items: center;
 }
 
-.navbar-bg span {
+.navbar .navigate-link {
+    width: 65%;
     font-family: monospace;
     font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .headerIcon {
+    display: none;
 }
 
 .remain-bg-blur {
