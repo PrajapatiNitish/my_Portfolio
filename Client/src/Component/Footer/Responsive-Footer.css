@@ -42,6 +42,7 @@
 
     .connect .link {
         display: none;
+        flex-direction: column;
     }
 
     .connect .footerIcon {

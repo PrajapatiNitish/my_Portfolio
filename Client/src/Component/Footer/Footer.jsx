@@ -4,27 +4,102 @@ import './Responsive-Footer.css';
 import MediaLink from '../Media-Link/Media-Link';
 
 export default function Footer() {
-    let [connectWithMe, setConnectWithMe] = useState(false);
-    let [programming, setProgramming] = useState(false);
-    let [workWithMe, setWorkWithMe] = useState(false);
-    let [download, setDownload] = useState(false);
 
+    // change down to up svg icon.
+    
+   
+    
+   
+
+
+    // change in connectWithMe
+    let [connectWithMe, setConnectWithMe] = useState(false); // Change state
+    let changeWidth = useRef(); //Select html element
+    let applyTransition = useRef();
 
     let changeConnectWithMeIcon = () => {
         setConnectWithMe(!connectWithMe)
     }
 
+    useEffect(() => {
+        if(connectWithMe == true) {
+            changeWidth.current.style.height = ("10rem");
+            applyTransition.current.style.display = ("flex");
+        }
+
+        if(connectWithMe == false) {
+            applyTransition.current.style.display = ("none");
+            changeWidth.current.style.height = ("auto")
+        }
+    }, [connectWithMe])
+
+
+    // changes in programming
+    let [programming, setProgramming] = useState(false);
+    let changeProgramming = useRef();
+    let changeProgrammingDisplay = useRef();
+    
     let changeProgrammingIcon = () => {
         setProgramming(!programming)
     }
+
+    useEffect(() => {
+        if (programming == true) {
+            changeProgramming.current.style.height = ("10rem");
+            changeProgrammingDisplay.current.style.display = ("flex");
+        }
+
+        if (programming == false) {
+            changeProgrammingDisplay.current.style.display = ("none");
+            changeProgramming.current.style.height = ("auto")
+        }
+    }, [programming]);
+
+
+    // Change in workWithMe
+    let [workWithMe, setWorkWithMe] = useState(false);
+    let changeWorkWithMe = useRef();
+    let changeWorkWithMeDisplay = useRef();
 
     let changeWorkWithMeIcon = () => {
         setWorkWithMe(!workWithMe)
     }
 
+    useEffect(() => {
+        if (workWithMe == true) {
+            changeWorkWithMe.current.style.height = ("10rem");
+            changeWorkWithMeDisplay.current.style.display = ("flex");
+        }
+
+        if (workWithMe == false) {
+            changeWorkWithMeDisplay.current.style.display = ("none");
+            changeWorkWithMe.current.style.height = ("auto")
+        }
+    }, [workWithMe])
+
+
+    //Change in  download
+    let [download, setDownload] = useState(false);
+    let changeDownload = useRef();
+    let changeDownloadDisplay = useRef();
+
     let changeDownloadIcon = () => {
         setDownload(!download)
     }
+
+    useEffect(() => {
+        if (download == true) {
+            changeDownloadDisplay.current.style.height = ("10rem");
+            changeDownloadDisplay.current.style.display = ("flex");
+        }
+
+        if (download == false) {
+            changeDownloadDisplay.current.style.display = ("none");
+            changeDownload.current.style.height = ("auto")
+        }
+    }, [download])
+
+
 
 
     return (
@@ -40,7 +115,7 @@ export default function Footer() {
                         </div>
 
                         <div className="connect">
-                            <div className="social-media">
+                            <div className="social-media" ref={changeWidth}>
                                 <div className='name_icon'>
                                     <span><h3>Social</h3></span>
                                     <span className='footerIcon connectWithMe' onClick={changeConnectWithMeIcon}>
@@ -59,8 +134,8 @@ export default function Footer() {
                                         }
                                     </span>
                                 </div>
-                                
-                                <div className="link">
+
+                                <div className="link" ref={applyTransition}>
                                     <MediaLink
                                         link={"https://www.instagram.com/prajapati.nitish8/"}
                                         linkName={"Instagram"}
@@ -77,13 +152,13 @@ export default function Footer() {
                                     />
 
                                     <MediaLink
-                                        link={""}
+                                        link={"https://www.reddit.com/u/PrajapatiNitish/s/lfPJgpZT3t"}
                                         linkName={"Reddit"}
                                     />
                                 </div>
                             </div>
 
-                            <div className="code">
+                            <div className="code" ref={changeProgramming}>
                                 <div className='name_icon'>
                                     <span><h3>Programming</h3></span>
                                     <span className='footerIcon programming' onClick={changeProgrammingIcon}>
@@ -103,7 +178,7 @@ export default function Footer() {
                                     </span>
                                 </div>
 
-                                <div className="link">
+                                <div className="link" ref={changeProgrammingDisplay}>
                                     <MediaLink
                                         link={"https://github.com/PrajapatiNitish"}
                                         linkName={"GitHub"}
@@ -116,7 +191,7 @@ export default function Footer() {
                                 </div>
                             </div>
 
-                            <div className="work-with-me">
+                            <div className="work-with-me" ref={changeWorkWithMe}>
                                 <div className='name_icon'>
                                     <span><h3>Hire me</h3></span>
                                     <span className='footerIcon workWithMe' onClick={changeWorkWithMeIcon}>
@@ -136,7 +211,7 @@ export default function Footer() {
                                     </span>
                                 </div>
 
-                                <div className="link">
+                                <div className="link" ref={changeWorkWithMeDisplay}>
                                     <MediaLink
                                         link={"https://www.fiverr.com/prajapatinitish?public_mode=true"}
                                         linkName={"Fiverr"}
@@ -154,7 +229,7 @@ export default function Footer() {
                                 </div>
                             </div>
 
-                            <div className="downloads">
+                            <div className="downloads" ref={changeDownload}>
                                 <div className='name_icon'>
                                     <span><h3>Download</h3></span>
                                     <span className='footerIcon download' onClick={changeDownloadIcon}>
@@ -174,7 +249,7 @@ export default function Footer() {
                                     </span>
                                 </div>
 
-                                <div className="link">
+                                <div className="link" ref={changeDownloadDisplay}>
                                     <MediaLink
                                         link={"https://drive.google.com/drive/folders/1vfmkhUNi3GL-_1IBBggbbv3OabDdciV3?usp=drive_link"}
                                         linkName={"Resume"}
