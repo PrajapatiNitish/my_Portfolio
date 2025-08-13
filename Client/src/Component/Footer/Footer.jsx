@@ -7,22 +7,24 @@ export default function Footer() {
 
     // change in connectWithMe
     let [connectWithMe, setConnectWithMe] = useState(false); // Change state
-    let changeWidth = useRef(); //Select html element
-    let applyTransition = useRef();
+    let changeConnectWithMe = useRef(); //Select html element
+    let changeConnectWithMeDisplay = useRef();
 
     let changeConnectWithMeIcon = () => {
         setConnectWithMe(!connectWithMe)
     }
 
     useEffect(() => {
-        if(connectWithMe == true) {
-            changeWidth.current.style.height = ("auto");
-            applyTransition.current.style.display = ("flex");
-        }
+        if(window.innerWidth <= 430) {
+            if (connectWithMe == true) {
+                changeConnectWithMe.current.style.height = ("auto");
+                changeConnectWithMeDisplay.current.style.display = ("flex");
+            }
 
-        if(connectWithMe == false) {
-            applyTransition.current.style.display = ("none");
-            changeWidth.current.style.height = ("auto")
+            else {
+                changeConnectWithMeDisplay.current.style.display = ("none");
+                changeConnectWithMe.current.style.height = ("auto")
+            }
         }
     }, [connectWithMe])
 
@@ -37,14 +39,16 @@ export default function Footer() {
     }
 
     useEffect(() => {
-        if (programming == true) {
-            changeProgramming.current.style.height = ("auto");
-            changeProgrammingDisplay.current.style.display = ("flex");
-        }
+        if(window.innerWidth <= 430) {
+            if (programming == true) {
+                changeProgramming.current.style.height = ("auto");
+                changeProgrammingDisplay.current.style.display = ("flex");
+            }
 
-        if (programming == false) {
-            changeProgrammingDisplay.current.style.display = ("none");
-            changeProgramming.current.style.height = ("auto")
+            else {
+                changeProgrammingDisplay.current.style.display = ("none");
+                changeProgramming.current.style.height = ("auto")
+            }
         }
     }, [programming]);
 
@@ -59,14 +63,16 @@ export default function Footer() {
     }
 
     useEffect(() => {
-        if (workWithMe == true) {
-            changeWorkWithMe.current.style.height = ("auto");
-            changeWorkWithMeDisplay.current.style.display = ("flex");
-        }
+        if(window.innerWidth <= 430) {
+            if (workWithMe == true) {
+                changeWorkWithMe.current.style.height = ("auto");
+                changeWorkWithMeDisplay.current.style.display = ("flex");
+            }
 
-        if (workWithMe == false) {
-            changeWorkWithMeDisplay.current.style.display = ("none");
-            changeWorkWithMe.current.style.height = ("auto")
+            else {
+                changeWorkWithMeDisplay.current.style.display = ("none");
+                changeWorkWithMe.current.style.height = ("auto")
+            }
         }
     }, [workWithMe])
 
@@ -81,14 +87,15 @@ export default function Footer() {
     }
 
     useEffect(() => {
-        if (download == true) {
-            changeDownloadDisplay.current.style.height = ("auto");
-            changeDownloadDisplay.current.style.display = ("flex");
-        }
-
-        if (download == false) {
-            changeDownloadDisplay.current.style.display = ("none");
-            changeDownload.current.style.height = ("auto")
+        if(window.innerWidth <= 430) {
+            if (download == true) {
+                changeDownloadDisplay.current.style.height = ("auto");
+                changeDownloadDisplay.current.style.display = ("flex");
+            }
+            else {
+                changeDownloadDisplay.current.style.display = ("none");
+                changeDownload.current.style.height = ("auto")
+            }
         }
     }, [download])
 
@@ -108,7 +115,7 @@ export default function Footer() {
                         </div>
 
                         <div className="connect">
-                            <div className="social-media" ref={changeWidth}>
+                            <div className="social-media" ref={changeConnectWithMe}>
                                 <div className='name_icon'>
                                     <span><h3>Social</h3></span>
                                     <span className='footerIcon connectWithMe' onClick={changeConnectWithMeIcon}>
@@ -128,7 +135,7 @@ export default function Footer() {
                                     </span>
                                 </div>
 
-                                <div className="link" ref={applyTransition}>
+                                <div className="link" ref={changeConnectWithMeDisplay}>
                                     <MediaLink
                                         link={"https://www.instagram.com/prajapati.nitish8/"}
                                         linkName={"Instagram"}

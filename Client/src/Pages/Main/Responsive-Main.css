@@ -47,6 +47,8 @@
     .intro-content .about-myself {
         width: 95%;
         padding: 0 1rem;
+
+        font-size: 14px;
         
         border-bottom: none;
     }

@@ -1,20 +1,34 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './Header.css';
 import './Responsive-Header.css';
 import { NavLink } from 'react-router-dom';
 
 export default function Header() {
+    // set dropdown for small screen view.
     let [icon, setIcon] = useState(false);
+    let changeIconStyle = useRef();
+    let changeLinkDisplay = useRef();
 
     let changeIcon = () => {
         setIcon(!icon)
     }
 
 
+    useEffect(() => {
+        if(icon == true) {
+            changeIconStyle.current.style.height = ("10rem");
+        }
+
+        if(icon == false) {
+            changeIconStyle.current.style.height = ("auto");
+        }
+    }, [icon])
+
+
     return (
         <>
             <header>
-                <div className='main-section'>
+                <div className='main-section' ref={changeIconStyle}>
                     <nav>
                         <div className='navbar'>
                             <span>

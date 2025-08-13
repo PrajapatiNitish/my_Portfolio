@@ -9,7 +9,7 @@ header {
     align-items: center;
     justify-items: center;
 
-    position: sticky;
+    position: fixed;
     z-index: 9999;
     top: 5px;
 }
