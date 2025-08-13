@@ -5,13 +5,6 @@ import MediaLink from '../Media-Link/Media-Link';
 
 export default function Footer() {
 
-    // change down to up svg icon.
-    
-   
-    
-   
-
-
     // change in connectWithMe
     let [connectWithMe, setConnectWithMe] = useState(false); // Change state
     let changeWidth = useRef(); //Select html element
@@ -23,7 +16,7 @@ export default function Footer() {
 
     useEffect(() => {
         if(connectWithMe == true) {
-            changeWidth.current.style.height = ("10rem");
+            changeWidth.current.style.height = ("auto");
             applyTransition.current.style.display = ("flex");
         }
 
@@ -45,7 +38,7 @@ export default function Footer() {
 
     useEffect(() => {
         if (programming == true) {
-            changeProgramming.current.style.height = ("10rem");
+            changeProgramming.current.style.height = ("auto");
             changeProgrammingDisplay.current.style.display = ("flex");
         }
 
@@ -67,7 +60,7 @@ export default function Footer() {
 
     useEffect(() => {
         if (workWithMe == true) {
-            changeWorkWithMe.current.style.height = ("10rem");
+            changeWorkWithMe.current.style.height = ("auto");
             changeWorkWithMeDisplay.current.style.display = ("flex");
         }
 
@@ -89,7 +82,7 @@ export default function Footer() {
 
     useEffect(() => {
         if (download == true) {
-            changeDownloadDisplay.current.style.height = ("10rem");
+            changeDownloadDisplay.current.style.height = ("auto");
             changeDownloadDisplay.current.style.display = ("flex");
         }
 
