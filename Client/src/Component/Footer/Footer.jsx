@@ -59,6 +59,7 @@ export default function Footer() {
                                         }
                                     </span>
                                 </div>
+                                
                                 <div className="link">
                                     <MediaLink
                                         link={"https://www.instagram.com/prajapati.nitish8/"}

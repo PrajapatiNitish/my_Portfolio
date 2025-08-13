@@ -1,5 +1,7 @@
 header {
     width: 100%;
+    
+    padding-top: env(safe-area-inset-top);
 
     display: flex;
     flex-direction: column;
@@ -10,7 +12,6 @@ header {
     position: sticky;
     z-index: 9999;
     top: 5px;
-
 }
 
 header .main-section {
@@ -47,7 +48,6 @@ nav .navbar {
 }
 
 .navbar h1 {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     font-size: 20px;
     font-style: oblique;
 

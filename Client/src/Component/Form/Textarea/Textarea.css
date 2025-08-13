@@ -1,6 +1,6 @@
 textarea {
     width: 90%;
-    height: 15vh;
+    height: 10rem;
     margin: 0.5rem 1rem;
     padding: 10px;
 
@@ -9,4 +9,8 @@ textarea {
 
     border: 0.5px solid rgb(161, 161, 161);
     border-radius: 15px;
+
+    resize: none;
+    overflow-X: hidden;
+    overflow-y: auto;
 }

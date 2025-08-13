@@ -5,6 +5,8 @@ export default function Textarea({ text }) {
         <>
             <textarea
                 placeholder={text}
+                maxLength={1000}
+                minLength={1}
             >
             </textarea>
         </>

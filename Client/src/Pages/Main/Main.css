@@ -50,7 +50,7 @@ main {
 
     border-right: 2px solid rgb(88, 88, 88);
 
-    animation: typing 5s steps(25) forwards, blink 0.9s ease infinite;
+    animation: typing 2s steps(25) forwards, blink 0.9s ease infinite;
 }
 
 @keyframes typing {
@@ -75,7 +75,6 @@ main {
 .intro-screen {
     background-color: rgb(255, 255, 255);
     width: 100%;
-    min-height: 70vh;
     
     
     display: flex;
@@ -94,7 +93,7 @@ main {
 }
 
 .intro-screen .img #screen-img {
-    height: 70svh;
+    height: 30rem;
 }
 
 .intro-screen .intro-content {
@@ -108,7 +107,7 @@ main {
 
 .intro-content .welcome-msg {
     width: 90%;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
 }
 
