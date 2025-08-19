@@ -18,12 +18,35 @@
 }
 
 @media (max-width: 430px) {
+    nav .navbar {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+    }
 
     .navbar .navigate-link {
+        width: 100%;
+        margin-bottom: 1rem;
+
         display: none;
+        flex-direction: column;
+
+        font-size: 22px;
+        font-family: inherit;
+        font-weight: 600;
+
+        gap: 0.5rem;
+    }
+
+    .navigate-link a {
+        color: rgb(22, 22, 22);
+        margin-bottom: 1rem;
     }
 
     .navbar .headerIcon {
+        width: fit-content;
         display: contents;
     }
 

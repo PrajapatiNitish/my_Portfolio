@@ -1,3 +1,8 @@
+footer li {
+    list-style-type: none;
+}
+
+/* Footer Styling */
 footer {
     width: 100%;
     margin-top: 2rem;

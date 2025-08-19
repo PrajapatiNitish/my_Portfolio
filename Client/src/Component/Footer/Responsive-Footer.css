@@ -9,6 +9,7 @@
         gap: 16px;
     }
 
+    /* Address */
     .content .contact {
         width: 100%;
 
@@ -27,6 +28,7 @@
         font-size: 14px;
     }
 
+    /* Connect to the links */
     .content .connect {
         width: 100%;
         flex-direction: column;
@@ -56,6 +58,7 @@
         font-weight: 600;
     }
 
+    /* Copyright */
     .copyright {
         justify-content: start;
     }

@@ -10,8 +10,11 @@ export default function Footer() {
     let changeConnectWithMe = useRef(); //Select html element
     let changeConnectWithMeDisplay = useRef();
 
-    let changeConnectWithMeIcon = () => {
-        setConnectWithMe(!connectWithMe)
+    let changeConnectWithMeIcon = (e) => {
+        e.preventDefault();
+
+        setConnectWithMe(!connectWithMe);
+        console.log(connectWithMe, "this is printing")
     }
 
     useEffect(() => {
@@ -100,6 +103,13 @@ export default function Footer() {
     }, [download])
 
 
+    //Store all element in array.
+    let totalElement = [connectWithMe, programming, workWithMe, download];
+    console.log(totalElement)
+
+    let [elementState, setElementState] = useState(false);
+
+
 
 
     return (
@@ -136,25 +146,33 @@ export default function Footer() {
                                 </div>
 
                                 <div className="link" ref={changeConnectWithMeDisplay}>
-                                    <MediaLink
-                                        link={"https://www.instagram.com/prajapati.nitish8/"}
-                                        linkName={"Instagram"}
-                                    />
+                                    <li>
+                                        <MediaLink
+                                            link={"https://www.instagram.com/prajapati.nitish8/"}
+                                            linkName={"Instagram"}
+                                        />
+                                    </li>
 
-                                    <MediaLink
-                                        link={"https://x.com/ernitish45"}
-                                        linkName={"X"}
-                                    />
+                                    <li>
+                                        <MediaLink
+                                            link={"https://x.com/ernitish45"}
+                                            linkName={"X"}
+                                        />
+                                    </li>
 
-                                    <MediaLink
-                                        link={"https://www.linkedin.com/in/nitish-kumar-4ab304262/"}
-                                        linkName={"Linked In"}
-                                    />
+                                    <li>
+                                        <MediaLink
+                                            link={"https://www.linkedin.com/in/nitish-kumar-4ab304262/"}
+                                            linkName={"Linked In"}
+                                        />
+                                    </li>
 
-                                    <MediaLink
-                                        link={"https://www.reddit.com/u/PrajapatiNitish/s/lfPJgpZT3t"}
-                                        linkName={"Reddit"}
-                                    />
+                                    <li>
+                                        <MediaLink
+                                            link={"https://www.reddit.com/u/PrajapatiNitish/s/lfPJgpZT3t"}
+                                            linkName={"Reddit"}
+                                        />
+                                    </li>
                                 </div>
                             </div>
 
@@ -179,15 +197,19 @@ export default function Footer() {
                                 </div>
 
                                 <div className="link" ref={changeProgrammingDisplay}>
-                                    <MediaLink
-                                        link={"https://github.com/PrajapatiNitish"}
-                                        linkName={"GitHub"}
-                                    />
+                                    <li>
+                                        <MediaLink
+                                            link={"https://github.com/PrajapatiNitish"}
+                                            linkName={"GitHub"}
+                                        />
+                                    </li>
 
-                                    <MediaLink
-                                        link={"https://leetcode.com/u/Prajapatinitsh8/"}
-                                        linkName={"Leetcode"}
-                                    />
+                                    <li>
+                                        <MediaLink
+                                            link={"https://leetcode.com/u/Prajapatinitsh8/"}
+                                            linkName={"Leetcode"}
+                                        />
+                                    </li>
                                 </div>
                             </div>
 
@@ -212,20 +234,26 @@ export default function Footer() {
                                 </div>
 
                                 <div className="link" ref={changeWorkWithMeDisplay}>
-                                    <MediaLink
-                                        link={"https://www.fiverr.com/prajapatinitish?public_mode=true"}
-                                        linkName={"Fiverr"}
-                                    />
+                                    <li>
+                                        <MediaLink
+                                            link={"https://www.fiverr.com/prajapatinitish?public_mode=true"}
+                                            linkName={"Fiverr"}
+                                        />
+                                    </li>
 
-                                    <MediaLink
-                                        link={"https://www.upwork.com/freelancers/~01100b915d97d63834"}
-                                        linkName={"Upwork"}
-                                    />
+                                    <li>
+                                        <MediaLink
+                                            link={"https://www.upwork.com/freelancers/~01100b915d97d63834"}
+                                            linkName={"Upwork"}
+                                        />
+                                    </li>
 
-                                    <MediaLink
-                                        link={"https://www.freelancer.in/u/prajapatinitish8"}
-                                        linkName={"Freelancer"}
-                                    />
+                                    <li>
+                                        <MediaLink
+                                            link={"https://www.freelancer.in/u/prajapatinitish8"}
+                                            linkName={"Freelancer"}
+                                        />
+                                    </li>
                                 </div>
                             </div>
 
@@ -250,10 +278,12 @@ export default function Footer() {
                                 </div>
 
                                 <div className="link" ref={changeDownloadDisplay}>
-                                    <MediaLink
-                                        link={"https://drive.google.com/drive/folders/1vfmkhUNi3GL-_1IBBggbbv3OabDdciV3?usp=drive_link"}
-                                        linkName={"Resume"}
-                                    />
+                                    <li>
+                                        <MediaLink
+                                            link={"https://drive.google.com/drive/folders/1vfmkhUNi3GL-_1IBBggbbv3OabDdciV3?usp=drive_link"}
+                                            linkName={"Resume"}
+                                        />
+                                    </li>
                                 </div>
                             </div>
                         </div>

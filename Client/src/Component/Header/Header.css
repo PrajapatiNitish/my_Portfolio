@@ -1,13 +1,11 @@
 header {
     width: 100%;
-    
-    padding-top: env(safe-area-inset-top);
+    height: 100%;
 
     display: flex;
     flex-direction: column;
 
     align-items: center;
-    justify-items: center;
 
     position: fixed;
     z-index: 9999;
@@ -16,13 +14,13 @@ header {
 
 header .main-section {
     width: 90%;
-    background-color: rgba(255, 255, 255, 0.712);
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.586);
+    backdrop-filter: blur(6px);
 
     display: flex;
 
     border-radius: 20px;
-    border: 1px solid rgba(182, 182, 182, 0.832);
+    border: 0.5px solid rgba(182, 182, 182, 0.832);
 
     justify-content: center;
 }
@@ -47,7 +45,17 @@ nav .navbar {
     align-items: center;
 }
 
+.menu {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
 .navbar h1 {
+    width: auto;
     font-size: 20px;
     font-style: oblique;
 
@@ -59,16 +67,16 @@ nav .navbar {
 
 .navbar .navigate-link {
     width: 65%;
+    height: auto;
+
     font-family: monospace;
     font-size: 14px;
+
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
 .navbar .headerIcon {
     display: none;
-}
-
-.remain-bg-blur {
-    width: 100%;
 }

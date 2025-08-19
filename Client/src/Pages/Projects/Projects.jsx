@@ -7,10 +7,10 @@ export default function Projects() {
             <div className="project-div">
                 <div className="project-sub-div">
                     <div className='achievement-header'>
-                            <h2>
-                                Projects
-                            </h2>
-                        </div>
+                        <h2>
+                            Projects
+                        </h2>
+                    </div>
 
                     <div className="project">
                         <Achievement
