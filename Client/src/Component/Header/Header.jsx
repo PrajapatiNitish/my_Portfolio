@@ -28,7 +28,7 @@ export default function Header() {
                 bgBlur.current.style.backdropFilter = ("blur(0)")
             }
         }
-    }, [icon])
+    }, [icon]);
 
 
     return (
