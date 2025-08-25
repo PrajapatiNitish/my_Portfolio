@@ -15,6 +15,7 @@ main {
 
     gap: 1rem;
     justify-items: center;
+    align-items: center;
 }
 
 .intro {
@@ -137,7 +138,7 @@ main {
 }
 
 .about-achievement {
-    width: 100%;
+    width: 95%;
     font-size: 16px;
 
     padding: 1rem 0.5rem 0.5rem 0.5rem;
@@ -148,7 +149,7 @@ main {
 }
 
 .achievements-content {
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -169,7 +170,7 @@ main {
 }
 
 .educations {
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     gap: 5px;

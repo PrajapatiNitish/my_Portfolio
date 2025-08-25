@@ -25,6 +25,7 @@ body {
 /* Target root id element inside in body. */
 #root {
   width: 100%;
+  height: max-content;
   
   display: flex;
   flex-direction: column;

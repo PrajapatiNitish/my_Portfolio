@@ -1,6 +1,6 @@
 header {
     width: 100%;
-    height: 100%;
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -8,14 +8,16 @@ header {
     align-items: center;
 
     position: fixed;
+    background-position-x: unset;
     z-index: 9999;
     top: 5px;
 }
 
 header .main-section {
     width: 90%;
-    background-color: rgba(255, 255, 255, 0.586);
-    backdrop-filter: blur(6px);
+    height: inherit;
+    background-color: rgba(255, 255, 255, 0.914);
+    backdrop-filter: blur(5px);
 
     display: flex;
 
@@ -37,7 +39,6 @@ nav {
 
 nav .navbar {
     width: 100%;
-    min-height: 8vh;
     display: flex;
     flex-direction: row;
 
@@ -47,6 +48,7 @@ nav .navbar {
 
 .menu {
     width: auto;
+    height: 8vh;
     display: flex;
     flex-direction: row;
 

@@ -16,7 +16,7 @@ export default function Header() {
 
 
     useEffect(() => {
-        if (window.innerWidth <= 430) {
+        if (window.innerWidth <= 1024) {
             if (icon == true) {
                 changeIconStyle.current.style.height = ("auto");
                 showLink.current.style.display = ("flex");
