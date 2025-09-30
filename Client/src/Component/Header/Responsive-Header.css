@@ -5,7 +5,7 @@
 
   .menu {
     width: 100%;
-    height: 6vh;
+    height: 4rem;
   }
 
   .navbar .navigate-link {
@@ -30,22 +30,16 @@
   .navbar .headerIcon {
     display: flex;
   }
-
-  .icon {
-    width: 24px;
-    height: 24px;
-  }
 }
 
 @media (max-width: 430px) {
-  
   nav .navbar {
     flex-direction: column;
   }
 
   .menu {
-    width: inherit;
-    height: 7vh;
+    width: 100%;
+    height: 4rem;
   }
 
   .navbar .navigate-link {
@@ -68,12 +62,6 @@
   }
 
   .navbar .headerIcon {
-    width: fit-content;
-    display: contents;
-  }
-
-  .icon {
-    width: 24px;
-    height: 24px;
+    display: flex;
   }
 }

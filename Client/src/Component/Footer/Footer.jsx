@@ -5,34 +5,14 @@ import MediaLink from "../Media-Link/Media-Link";
 import ConnectCompo from "../Connect-Compo/Connect-Compo";
 
 export default function Footer() {
-  const [social, setSocial] = useState(false);
-  const [coding, setCoding] = useState(false);
-  const [hireMe, setHireMe] = useState(false);
-  const [download, setDownload] = useState(false);
-
-  const changeSocialIcon = () => {
-    setSocial(!social);
-  };
-
-  const changeCodingIcon = () => {
-    setCoding(!coding);
-  };
-
-  const changeHireMeIcon = () => {
-    setHireMe(!hireMe);
-  };
-
-  const changeDownloadIcon = () => {
-    setDownload(!download);
-  };
 
   const [linkCompo, setLinkCompo] = useState([
     {
       className: "social-media",
       elementKey: "social-media",
       linkHeader: "Social",
-      mouseClick: changeSocialIcon,
-      funcOfElement: social,
+      mouseClick: undefined,
+      funcOfElement: NaN,
       allLink: [
         {
           link: "https://www.instagram.com/prajapati.nitish8/",
@@ -42,7 +22,7 @@ export default function Footer() {
 
         {
           link: "https://x.com/ernitish45",
-          linkName: "X",
+          linkName: "X.com",
           linkKey: "x",
         },
 
@@ -64,8 +44,8 @@ export default function Footer() {
       className: "coding",
       elementKey: "coding",
       linkHeader: "Coding",
-      mouseClick: changeCodingIcon,
-      funcOfElement: coding,
+      mouseClick: undefined,
+      funcOfElement: NaN,
       allLink: [
         {
           link: "https://github.com/PrajapatiNitish",
@@ -85,8 +65,8 @@ export default function Footer() {
       className: "hireMe",
       elementKey: "hireMe",
       linkHeader: "Hire Me",
-      mouseClick: changeHireMeIcon,
-      funcOfElement: hireMe,
+      mouseClick: undefined,
+      funcOfElement: NaN,
       allLink: [
         {
           link: "https://www.fiverr.com/prajapatinitish?public_mode=true",
@@ -112,8 +92,8 @@ export default function Footer() {
       className: "download",
       elementKey: "download",
       linkHeader: "Download",
-      mouseClick: changeDownloadIcon,
-      funcOfElement: download,
+      mouseClick: undefined,
+      funcOfElement: NaN,
       allLink: [
         {
           link: "https://drive.google.com/drive/folders/1vfmkhUNi3GL-_1IBBggbbv3OabDdciV3?usp=drive_link",
@@ -131,7 +111,7 @@ export default function Footer() {
         <div className="footer-content">
           <div className="content">
             <div className="contact">
-              <h3 className="name">Nitish Prajapati</h3>
+              <h1 className="name">Nitish Prajapati</h1>
               <p>
                 Parampara Agaraha, Naganathapura, Electronic City, Bangaluru
                 Karnatka 560100

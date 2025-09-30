@@ -5,6 +5,7 @@ header {
     display: flex;
     flex-direction: column;
 
+    justify-content: center;
     align-items: center;
 
     position: fixed;
@@ -15,9 +16,9 @@ header {
 
 header .main-section {
     width: 90%;
-    height: inherit;
-    background-color: rgba(255, 255, 255, 0.914);
-    backdrop-filter: blur(5px);
+    height: max-content;
+    background-color: rgba(255, 255, 255, 0.575);
+    backdrop-filter: blur(6px);
 
     display: flex;
 
@@ -29,7 +30,6 @@ header .main-section {
 
 nav {
     width: 90%;
-    
     display: flex;
     flex-direction: column;
 
@@ -48,7 +48,7 @@ nav .navbar {
 
 .menu {
     width: auto;
-    height: 8vh;
+    height: 3.5rem;
     display: flex;
     flex-direction: row;
 
@@ -59,7 +59,7 @@ nav .navbar {
 .navbar h1 {
     width: auto;
     font-size: 20px;
-    font-style: oblique;
+    font-style: italic;
 
     color: rgb(0, 0, 0);
 
@@ -69,7 +69,7 @@ nav .navbar {
 
 .navbar .navigate-link {
     width: 65%;
-    height: auto;
+    height: inherit;
 
     font-family: monospace;
     font-size: 14px;

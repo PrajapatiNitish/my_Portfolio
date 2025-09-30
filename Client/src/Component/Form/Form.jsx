@@ -8,12 +8,14 @@ function Form({ onSubmit }) {
         <form className='form' onSubmit={onSubmit}>
             <Input
                 type={"text"}
-                placeholder={"Your fullname"} 
+                placeholder={"Your fullname"}
+                id={"fullname"} 
             />
 
             <Input
                 type={"email"}
-                placeholder={"Your e-mail"} 
+                placeholder={"Your e-mail"}
+                id={"email"} 
             />
 
             <Textarea text={"Write your feedback"}/>

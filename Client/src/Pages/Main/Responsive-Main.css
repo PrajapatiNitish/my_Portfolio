@@ -23,7 +23,7 @@
     }
 
     .intro-screen .img #screen-img {
-        height: 50vh;
+        min-height: 35rem;
         padding: 3rem 0 0 0;
     }
 
@@ -85,6 +85,7 @@
     .intro-screen .img {
         background: white;
         width: 100%;
+        height: fit-content;
         padding: 0;
 
         display: flex;
@@ -95,7 +96,7 @@
     }
 
     .intro-screen .img #screen-img {
-        height: 50vh;
+        height: 28rem;
         padding: 3rem 0 0 0;
     }
 

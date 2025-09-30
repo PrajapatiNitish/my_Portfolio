@@ -1,0 +1,15 @@
+.name_icon h2{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.link ul{
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 430px) {
+    .name_icon h2 {
+        font-size: 15px;
+    }
+}
