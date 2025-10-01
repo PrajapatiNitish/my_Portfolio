@@ -1,5 +1,6 @@
 .Achievement-content-div {
-    width: 100%;
+    width: auto;
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -21,9 +22,12 @@
     max-width: 100%;
     overflow: hidden;
 
+    text-wrap: wrap;
+    text-align: justify;
+
     font-size: 14px;
 }
 
 .Achievement-content-div .link {
-    font-size: 14px;
+    font-size: 13px;
 }

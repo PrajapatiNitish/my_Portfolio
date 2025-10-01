@@ -9,7 +9,7 @@ export default function Projects() {
         <div className="internship-sub-div">
           <div className='Internship-header'>
             <h2>
-              Internship
+              Internship - Show your experience
             </h2>
           </div>
 

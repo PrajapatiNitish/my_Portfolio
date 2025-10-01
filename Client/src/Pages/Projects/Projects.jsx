@@ -8,7 +8,7 @@ export default function Projects() {
                 <div className="project-sub-div">
                     <div className='achievement-header'>
                         <h2>
-                            Projects
+                            Projects - Show your skills and works
                         </h2>
                     </div>
 

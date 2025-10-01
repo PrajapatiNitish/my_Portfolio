@@ -24,11 +24,11 @@
 }
 
 .skills-sub-div .skills-content-div {
-    width: 100%;
+    width: auto;
+    height: auto;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    width: 100%;
     margin-bottom: 0.5rem;
 }

@@ -117,6 +117,9 @@ export default function Header() {
                 <span>
                   <NavLink to={"/Internship"}>Internship</NavLink>
                 </span>
+                <span>
+                  <NavLink to={"/Iussues"}>issues</NavLink>
+                </span>
               </div>
             </div>
           </nav>
