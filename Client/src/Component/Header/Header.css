@@ -28,7 +28,7 @@ header .main-section {
     justify-content: center;
 }
 
-nav {
+.main-section nav {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@ nav .navbar {
 }
 
 .menu {
-    width: auto;
+    width: 100%;
     height: 3.5rem;
     display: flex;
     flex-direction: row;
@@ -56,19 +56,28 @@ nav .navbar {
     align-items: center;
 }
 
+.menu .header-space a {
+    margin: 0px;
+    padding: 0px;
+}
+
 .navbar h1 {
-    width: auto;
+    width: fit-content;
     font-size: 20px;
     font-style: italic;
-
+    
     color: rgb(0, 0, 0);
-
+    
     align-items: center;
     justify-items: center;
 }
 
+.navbar .headerIcon {
+    display: none;
+}
+
 .navbar .navigate-link {
-    width: 65%;
+    width: 100%;
     height: inherit;
 
     font-family: monospace;
@@ -77,8 +86,4 @@ nav .navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.navbar .headerIcon {
-    display: none;
 }

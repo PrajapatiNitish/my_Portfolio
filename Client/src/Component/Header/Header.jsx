@@ -28,7 +28,7 @@ export default function Header() {
           <nav>
             <div className="navbar">
               <div className="menu">
-                <div>
+                <div className="header-space">
                   <NavLink to={"/"}>
                     <h1>Nitish Prajapati</h1>
                   </NavLink>

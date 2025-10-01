@@ -62,6 +62,7 @@
   }
 
   .navbar .headerIcon {
+    width: fit-content;
     display: flex;
   }
 }
