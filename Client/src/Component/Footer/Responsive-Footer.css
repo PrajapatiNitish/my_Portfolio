@@ -16,7 +16,6 @@
         padding-bottom: 1rem;
 
         border-bottom: 1px solid rgba(167, 167, 167, 0.86);
-        ;
     }
 
     .contact .name {
@@ -32,6 +31,7 @@
     .content .connect {
         width: 100%;
         flex-direction: column;
+        align-items: unset;
     }
 
     .connect .name_icon {
@@ -49,8 +49,8 @@
 
     .connect .footerIcon {
         display: flex;
-        width: 18px;
-        height: 18px;
+        width: 24px;
+        height: 24px;
     }
 
     .connect h3 {

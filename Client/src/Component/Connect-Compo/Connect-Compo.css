@@ -1,15 +1,42 @@
-.name_icon h2{
-    font-size: 12px;
+.footer-icon-button {
+  margin: 0;
+  padding: 0;
+
+  background: none;
+  border: none;
+
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.footer-icon-button div {
+  justify-items: start;
+}
+
+.name_icon h2 {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.link ul {
+  margin: 0;
+  padding: 0;
+
+  gap: 20px;
+
+  justify-items: start;
+}
+
+.link ul li {
     font-weight: 600;
 }
 
-.link ul{
-    margin: 0;
-    padding: 0;
-}
-
 @media (max-width: 430px) {
-    .name_icon h2 {
-        font-size: 15px;
-    }
+  .name_icon h2 {
+    font-size: 15px;
+  }
+
+  .footer-icon-button div {
+    justify-items: unset;
+  }
 }

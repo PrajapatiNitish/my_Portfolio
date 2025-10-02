@@ -11,8 +11,6 @@ export default function Footer() {
       className: "social-media",
       elementKey: "social-media",
       linkHeader: "Social",
-      mouseClick: undefined,
-      funcOfElement: NaN,
       allLink: [
         {
           link: "https://www.instagram.com/prajapati.nitish8/",
@@ -44,8 +42,6 @@ export default function Footer() {
       className: "coding",
       elementKey: "coding",
       linkHeader: "Coding",
-      mouseClick: undefined,
-      funcOfElement: NaN,
       allLink: [
         {
           link: "https://github.com/PrajapatiNitish",
@@ -65,8 +61,6 @@ export default function Footer() {
       className: "hireMe",
       elementKey: "hireMe",
       linkHeader: "Hire Me",
-      mouseClick: undefined,
-      funcOfElement: NaN,
       allLink: [
         {
           link: "https://www.fiverr.com/prajapatinitish?public_mode=true",
@@ -92,8 +86,6 @@ export default function Footer() {
       className: "download",
       elementKey: "download",
       linkHeader: "Download",
-      mouseClick: undefined,
-      funcOfElement: NaN,
       allLink: [
         {
           link: "https://drive.google.com/drive/folders/1vfmkhUNi3GL-_1IBBggbbv3OabDdciV3?usp=drive_link",
@@ -127,8 +119,6 @@ export default function Footer() {
                     key={links.elementKey}
                     className={links.className}
                     linkHeader={links.linkHeader}
-                    mouseClick={links.mouseClick}
-                    funcOfElement={links.funcOfElement}
                     allLink={links.allLink.map((eachLink) => {
                       return (
                         <li key={eachLink.linkKey}>

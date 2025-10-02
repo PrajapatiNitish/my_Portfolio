@@ -25,7 +25,7 @@ body {
 }
 
 /* Target root id element inside in body. */
-#root {
+#global-page {
   width: 100%;
   height: max-content;
   

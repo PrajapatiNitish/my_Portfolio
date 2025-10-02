@@ -11,12 +11,12 @@ header {
     position: fixed;
     background-position-x: unset;
     z-index: 9999;
-    top: 5px;
+    top: 3px;
 }
 
 header .main-section {
     width: 90%;
-    height: max-content;
+    height: auto;
     background-color: rgba(255, 255, 255, 0.575);
     backdrop-filter: blur(6px);
 
