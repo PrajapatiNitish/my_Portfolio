@@ -21,6 +21,11 @@
     margin: 1rem;
 }
 
+.project-sub-div .achievement-header{
+    width: 90%;
+    
+}
+
 .project {
     padding: 1rem;
 }

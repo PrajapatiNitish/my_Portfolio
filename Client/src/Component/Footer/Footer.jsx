@@ -6,7 +6,7 @@ import ConnectCompo from "../Connect-Compo/Connect-Compo";
 
 export default function Footer() {
 
-  const [linkCompo, setLinkCompo] = useState([
+  const linkCompo = [
     {
       className: "social-media",
       elementKey: "social-media",
@@ -94,7 +94,7 @@ export default function Footer() {
         },
       ],
     },
-  ]);
+  ];
 
   //return and start writring html code
   return (

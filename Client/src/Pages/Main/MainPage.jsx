@@ -1,5 +1,5 @@
-import "./Main.css";
-import "./Responsive-Main.css";
+import "./MainPage.css";
+import "./Responsive-MainPage.css";
 import Achievement from "../../Component/Achievement/Achievements";
 import Educations from "../../Component/Education/Education";
 import Form from "../../Component/Form/Form";
@@ -72,7 +72,7 @@ export default function Main() {
 
             <div className="achievements-content">
               <Achievement
-                head={"2nd Rank in Drawing (Group-B)"}
+                head={"1) 2nd Rank in Drawing (Group-B)"}
                 content={
                   "We had to draw the scatch of India's formal law's minister and jurist of India ' Dr. Bhimrao Ramji Ambedkar '. I secured 2nd rank in this competition. This competition was organized by ' Shree Vishwabandhy Library, Bakhri ' in year 2017 on Library's 62th Birth Anniversary."
                 }
@@ -81,16 +81,16 @@ export default function Main() {
               />
 
               <Achievement
-                head={"3rd Rank in Quiz Competition"}
+                head={"2) 3rd Rank in Quiz Competition"}
                 content={
-                  "This competition was organized in year 2018 with consent of hometown's all coaching institutions. I secured 3rd rank in this competition."
+                  "This competition was organized in year 2018 with consent of hometown's all coaching institutions. Student's selction was based on their class test's marks. Also Institute had boundary to select only 10 students. I got selected for this compition. The questions based on 10th syllabus text book in this quiz and I secured 3rd rank in this competition."
                 }
                 link={"none"}
                 linkName={"View Image"}
               />
 
               <Achievement
-                head={"3rd Rank in Essay Writing (Group-C)"}
+                head={"3) 3rd Rank in Essay Writing (Group-C)"}
                 content={
                   "We had to write an essay on ' Side effect of western culture on india '. I secured 3rd rank in this competition. This competition was also organized by ' Shree Vishwabandhy Library, Bakhri ' in year 2022 on Library's 68st Birth Anniversary."
                 }
@@ -109,7 +109,7 @@ export default function Main() {
               <Educations
                 educationHead={"B.Tech in Computer Science & Engineering"}
                 educationContent={
-                  "Pursuing from Faridabad College of Engineering and Management, Faridabad in 2025-2028"
+                  "Pursuing batchlor from Faridabad College of Engineering and Management, Faridabad in from August 2025 to June 2028"
                 }
               />
 
@@ -132,7 +132,7 @@ export default function Main() {
           <div className="feedback-div">
             <div className="feedback-content-div">
               <div className="feedback-head">
-                <h1>Give me your valueable feedback.</h1>
+                <h1>Give me, <br /> your valueable feedback. I respect you thoughts.</h1>
               </div>
             </div>
 

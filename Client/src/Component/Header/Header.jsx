@@ -5,10 +5,11 @@ import { NavLink } from "react-router-dom";
 
 export default function Header() {
   // set dropdown for small screen view.
-  const [isBtnClicked, setIsBtnClicked] = useState(true); //change state false to true.
+  let [isBtnClicked, setIsBtnClicked] = useState(true); //change state false to true.
 
   //Accessing DOM element using useRef hook.
   const showLink = useRef(); //do display none to visible.
+  const applyAnim = useRef(); //apply animation on header when page load.
 
   //Selecting DOM element using useRef hook for triggering animations.
   const openBottomBtnAnim = useRef();
@@ -21,13 +22,13 @@ export default function Header() {
   //each object contain two reference of animation.
   const animBtn = {
     openBtnAnim: {
-      openBottomBtnAnim : openBottomBtnAnim,
-      openTopBtnAnim : openTopBtnAnim,    
+      openBottomBtnAnim: openBottomBtnAnim,
+      openTopBtnAnim: openTopBtnAnim,
     },
 
     closeBtnAnim: {
-      closeBottomBtnAnim : closeBottomBtnAnim,
-      closeTopBtnAnim : closeTopBtnAnim,
+      closeBottomBtnAnim: closeBottomBtnAnim,
+      closeTopBtnAnim: closeTopBtnAnim,
     },
   };
 
@@ -42,19 +43,30 @@ export default function Header() {
     }
 
     setIsBtnClicked(!isBtnClicked);
+    console.log(isBtnClicked);
   };
+
+
+  //Close link div after clicking on any link.
+  const closeLink =  
 
   //whenever isBtnClicked state change this useEffect will run.
   //it will show or hide the nav link.
 
   useEffect(() => {
-    if(window.innerWidth <= 1024)  {
+    if (window.innerWidth <= 1024) {
       isBtnClicked
         ? {
-            linkNotActive: (showLink.current.style.display = "none"),
+            linkNotActive: {
+              displayNone: (showLink.current.style.display = "none"),
+              srinkHeight: (applyAnim.current.style.height = "3.5rem"),
+            },
           }
         : {
-            linkActive: (showLink.current.style.display = "flex"),
+            linkActive: {
+              displayflex: (showLink.current.style.display = "flex"),
+              increaseheight: (applyAnim.current.style.height = "100vh"),
+            },
           };
     }
   }, [isBtnClicked]);
@@ -62,7 +74,7 @@ export default function Header() {
   return (
     <>
       <header>
-        <div className="main-section">
+        <div className="main-section" ref={applyAnim}>
           <nav>
             <div className="navbar">
               <div className="menu">
@@ -73,7 +85,7 @@ export default function Header() {
                 </div>
 
                 <div className="headerIcon">
-                  <button className="poly-anim-btn" onClick={changeIcon}>
+                  <button aria-label="Close" className="poly-anim-btn" onClick={changeIcon}>
                     <svg width="18" height="18" viewBox="0 0 18 18">
                       <polyline
                         id="nav-poly-bottom-btn"
@@ -151,10 +163,11 @@ export default function Header() {
                 </div>
               </div>
 
-              <div className="navigate-link" ref={showLink}>
+              <div className="navigate-link" ref={showLink} onClick={closeLink}>
                 <span>
                   <NavLink to={"/Skills"}>Skills</NavLink>
                 </span>
+
                 <span>
                   <NavLink to={"/Projects"}>Projects</NavLink>
                 </span>
@@ -162,7 +175,7 @@ export default function Header() {
                   <NavLink to={"/Internship"}>Internship</NavLink>
                 </span>
                 <span>
-                  <NavLink to={"/Iussues"}>issues</NavLink>
+                  <NavLink to={"/Issues"}>Issues</NavLink>
                 </span>
               </div>
             </div>

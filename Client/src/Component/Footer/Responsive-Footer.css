@@ -1,3 +1,51 @@
+@media (min-width: 431px) and (max-width: 1024px) {
+
+    /* Style Name and address */
+    .footer-content .content {
+        display: flex;
+        flex-direction: column;
+
+        gap: 16px;
+    }
+
+    /* Address */
+    .content .contact {
+        width: 100%;
+
+        padding-bottom: 1rem;
+
+        border-bottom: 1px solid rgba(167, 167, 167, 0.86);
+    }
+
+    .contact .name {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .contact p {
+        font-size: 14px;
+    }
+
+    /* Connect to the links */
+    .content .connect {
+        width: 100%;
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    .connect .footerIcon {
+        display: flex;
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Copyright */
+    .copyright {
+        justify-content: start;
+    }
+
+}
+
 /* styling for mobile. */
 @media (max-width: 430px) {
 
@@ -34,28 +82,11 @@
         align-items: unset;
     }
 
-    .connect .name_icon {
-        display: flex;
-        flex-direction: row;
-
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .connect .link {
-        display: none;
-        flex-direction: column;
-    }
-
     .connect .footerIcon {
         display: flex;
+        
         width: 24px;
         height: 24px;
-    }
-
-    .connect h3 {
-        font-size: 15px;
-        font-weight: 600;
     }
 
     /* Copyright */

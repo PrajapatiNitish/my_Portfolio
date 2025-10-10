@@ -45,9 +45,8 @@ footer {
 
 .contact .name {
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 400;
 }
-
 
 .content .connect {
     width: 80%;
@@ -59,11 +58,6 @@ footer {
 
 .connect .footerIcon {
     display: none;
-}
-
-.connect h3 {
-    font-size: 12px;
-    font-weight: 600;
 }
 
 .copyright {

@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;  
 }
 
 /* html */
@@ -13,7 +14,7 @@
 }
 
 body {
-  background: rgba(255, 255, 255, 0.918);
+  background: rgb(243, 243, 243);
   margin: 0;
   padding: 0;
   max-width: 1280px;
@@ -35,12 +36,12 @@ body {
   align-self: center;
 }
 
-:root a {
-  color: rgb(110, 110, 110);
+body a {
+  color: rgb(14, 6, 6);
   text-decoration: none;
 }
 
-:root a:hover {
+body a:hover {
   color: rgb(0, 0, 0);
 }
 

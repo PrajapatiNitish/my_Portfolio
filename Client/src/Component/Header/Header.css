@@ -1,6 +1,7 @@
 header {
     width: 100%;
-    height: auto;
+    height: fit-content;
+    background: white;
 
     display: flex;
     flex-direction: column;
@@ -11,25 +12,25 @@ header {
     position: fixed;
     background-position-x: unset;
     z-index: 9999;
-    top: 3px;
+
+    
 }
 
 header .main-section {
     width: 90%;
-    height: auto;
-    background-color: rgba(255, 255, 255, 0.575);
-    backdrop-filter: blur(6px);
+    height: 3.5rem;
 
     display: flex;
 
-    border-radius: 20px;
-    border: 0.5px solid rgba(182, 182, 182, 0.832);
+    overflow: hidden;
 
     justify-content: center;
+
+    transition: height 0.5s ease;
 }
 
 .main-section nav {
-    width: 90%;
+    width: 95%;
     display: flex;
     flex-direction: column;
 

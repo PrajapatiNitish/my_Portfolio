@@ -14,8 +14,8 @@
 .Achievement-content-div .head{
     max-width: 100%;
 
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 17px;
+    font-weight: 500;
 }
 
 .Achievement-content-div .content {
@@ -26,6 +26,7 @@
     text-align: justify;
 
     font-size: 14px;
+    font-style: italic;
 }
 
 .Achievement-content-div .link {
