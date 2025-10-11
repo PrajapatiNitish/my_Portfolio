@@ -1,3 +1,5 @@
+@import '../../Animations/Animations.css';
+
 .skills-main-div {
     margin-top: 5rem;
     width: 100%;
@@ -5,6 +7,11 @@
     display: flex;
 
     justify-content: center;
+
+    opacity: 0;
+    transform: translateY(-20);
+
+    animation: view 0.5s ease forwards;
 }
 
 .skills-sub-div {
@@ -24,7 +31,6 @@
 }
 
 .skills-sub-div .skills-content-div {
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 

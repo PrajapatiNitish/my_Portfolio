@@ -1,90 +1,95 @@
+@import "../../Animations/Animations.css";
+
 header {
-    width: 100%;
-    height: fit-content;
-    background: white;
+  width: 100%;
+  height: fit-content;
+  background: white;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    position: fixed;
-    background-position-x: unset;
-    z-index: 9999;
+  position: fixed;
+  background-position-x: unset;
+  z-index: 9999;
 
-    
+  opacity: 0;
+  transform: translateY(-12px);
+
+  animation: view 0.5s ease forwards;
 }
 
 header .main-section {
-    width: 90%;
-    height: 3.5rem;
+  width: 90%;
+  height: 3.5rem;
 
-    display: flex;
+  display: flex;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    justify-content: center;
+  justify-content: center;
 
-    transition: height 0.5s ease;
+  transition: height 0.5s ease;
 }
 
 .main-section nav {
-    width: 95%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
-    justify-items: center;
-    align-items: center;
+  justify-items: center;
+  align-items: center;
 }
 
 nav .navbar {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menu {
-    width: 100%;
-    height: 3.5rem;
-    display: flex;
-    flex-direction: row;
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  flex-direction: row;
 
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menu .header-space a {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .navbar h1 {
-    width: fit-content;
-    font-size: 20px;
-    font-style: italic;
-    
-    color: rgb(0, 0, 0);
-    
-    align-items: center;
-    justify-items: center;
+  width: fit-content;
+  font-size: 20px;
+  font-style: italic;
+
+  color: rgb(0, 0, 0);
+
+  align-items: center;
+  justify-items: center;
 }
 
 .navbar .headerIcon {
-    display: none;
+  display: none;
 }
 
 .navbar .navigate-link {
-    width: 100%;
-    height: inherit;
+  width: 100%;
+  height: inherit;
 
-    font-family: monospace;
-    font-size: 14px;
+  font-family: monospace;
+  font-size: 14px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

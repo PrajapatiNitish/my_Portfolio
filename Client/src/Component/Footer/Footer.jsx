@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Footer.css";
 import "./Responsive-Footer.css";
 import MediaLink from "../Media-Link/Media-Link";
@@ -108,7 +107,6 @@ export default function Footer() {
                 Parampara Agaraha, Naganathapura, Electronic City, Bangaluru
                 Karnatka 560100
               </p>
-              <p>Call - +91 8271747974</p>
               <p>Email - prajapatinitish49@gmail.com</p>
             </div>
 

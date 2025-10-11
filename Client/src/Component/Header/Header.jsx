@@ -4,11 +4,16 @@ import "./Responsive-Header.css";
 import { NavLink } from "react-router-dom";
 
 export default function Header() {
+  const navLinks = [
+    { to: "/Skills", label: "Skills", class: "staggered-link" },
+    { to: "/Projects", label: "Projects", class: "staggered-link" },
+    { to: "/Internship", label: "Internship", class: "staggered-link" },
+    { to: "/Issues", label: "Issues", class: "staggered-link" },
+  ];
+
   // set dropdown for small screen view.
   let [isBtnClicked, setIsBtnClicked] = useState(true); //change state false to true.
 
-  //Accessing DOM element using useRef hook.
-  const showLink = useRef(); //do display none to visible.
   const applyAnim = useRef(); //apply animation on header when page load.
 
   //Selecting DOM element using useRef hook for triggering animations.
@@ -16,6 +21,18 @@ export default function Header() {
   const closeBottomBtnAnim = useRef();
   const openTopBtnAnim = useRef();
   const closeTopBtnAnim = useRef();
+
+  //Accessing DOM element using useRef hook.
+  let showLink = useRef(null); //do display none to visible.
+
+  useEffect(() => {
+    const links = showLink.current.querySelectorAll(".staggered-link");
+
+    // Apply animation delay on animation
+    links.forEach((link, i) => {
+      link.style.animationDelay = `${i * 0.1}s`;
+    });
+  }, [isBtnClicked]);
 
   //create object of all animation's button. so that we can easily access them.
   //object contain two object openBtnAnim and closeBtnAnim.
@@ -46,10 +63,12 @@ export default function Header() {
     console.log(isBtnClicked);
   };
 
-
   //Close link div after clicking on any link.
-  const closeLink =  
-
+  const closeLink = async () => {
+    if (window.innerWidth <= 1024 && isBtnClicked == false) {
+      changeIcon();
+    }
+  };
   //whenever isBtnClicked state change this useEffect will run.
   //it will show or hide the nav link.
 
@@ -59,13 +78,14 @@ export default function Header() {
         ? {
             linkNotActive: {
               displayNone: (showLink.current.style.display = "none"),
-              srinkHeight: (applyAnim.current.style.height = "3.5rem"),
+              srinkHeight: (applyAnim.current.style.height = "4rem"),
             },
           }
         : {
             linkActive: {
               displayflex: (showLink.current.style.display = "flex"),
               increaseheight: (applyAnim.current.style.height = "100vh"),
+              changeOpacity: (showLink.current.style.opacity = "1"),
             },
           };
     }
@@ -78,14 +98,18 @@ export default function Header() {
           <nav>
             <div className="navbar">
               <div className="menu">
-                <div className="header-space">
+                <div className="header-space" onClick={closeLink}>
                   <NavLink to={"/"}>
                     <h1>Nitish Prajapati</h1>
                   </NavLink>
                 </div>
 
                 <div className="headerIcon">
-                  <button aria-label="Close" className="poly-anim-btn" onClick={changeIcon}>
+                  <button
+                    aria-label="Close"
+                    className="poly-anim-btn"
+                    onClick={changeIcon}
+                  >
                     <svg width="18" height="18" viewBox="0 0 18 18">
                       <polyline
                         id="nav-poly-bottom-btn"
@@ -164,19 +188,13 @@ export default function Header() {
               </div>
 
               <div className="navigate-link" ref={showLink} onClick={closeLink}>
-                <span>
-                  <NavLink to={"/Skills"}>Skills</NavLink>
-                </span>
-
-                <span>
-                  <NavLink to={"/Projects"}>Projects</NavLink>
-                </span>
-                <span>
-                  <NavLink to={"/Internship"}>Internship</NavLink>
-                </span>
-                <span>
-                  <NavLink to={"/Issues"}>Issues</NavLink>
-                </span>
+                {navLinks.map((li) => {
+                  return (
+                    <span key={li.label} className={li.class}>
+                      <NavLink to={li.to}>{li.label}</NavLink>
+                    </span>
+                  );
+                })}
               </div>
             </div>
           </nav>

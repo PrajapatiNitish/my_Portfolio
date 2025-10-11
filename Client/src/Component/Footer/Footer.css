@@ -32,11 +32,12 @@ footer {
 }
 
 .content .connect {
-    width: 20%;
+    width: 100%;
     display: flex;
     flex-direction: row;
 
     align-items: start;
+    justify-content: space-evenly;
 }
 
 .contact p {
@@ -46,14 +47,6 @@ footer {
 .contact .name {
     font-size: 12px;
     font-weight: 400;
-}
-
-.content .connect {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    
-    justify-content: space-evenly;
 }
 
 .connect .footerIcon {

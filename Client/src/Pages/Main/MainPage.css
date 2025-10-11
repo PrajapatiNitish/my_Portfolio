@@ -1,245 +1,231 @@
+@import "../../Animations/Animations.css";
+
 main {
-    margin-top: 5rem;
-    width: 100%;
+  margin-top: 5rem;
+  width: 100%;
 
-    display: flex;
+  display: flex;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(-20px);
+
+  animation: view 0.5s ease 0.2s forwards;
 }
 
 .main-content {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
 
-    gap: 1rem;
-    justify-items: center;
-    align-items: center;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
 }
 
 .intro {
-    width: 100%;
+  width: 100%;
 }
-
-/* Styling the intro card of large screen */
 
 /* Styling welcome msg */
 .welcome {
-    width: 100%;
-    margin-bottom: 1rem;
-    
-    display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
 
-    justify-content: center;
-    align-content: center;
+  display: flex;
+
+  justify-content: center;
+  align-content: center;
 }
 
 .space {
-    padding: 10px;
-    width: fit-content;
+  padding: 10px;
+  width: fit-content;
 }
 
 /* typing entering msg */
 .msg {
-    width: 0;
-    padding: 0;
+  width: 0;
+  padding: 0;
 
-    white-space: nowrap;
-    overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
 
-    font-weight: 500;
-    font-size: 15px;
+  font-weight: 500;
+  font-size: 15px;
 
-    border-right: 2px solid rgb(88, 88, 88);
+  border-right: 2px solid rgb(88, 88, 88);
 
-    animation: typing 2s steps(25) forwards, blink 0.9s ease infinite;
+  animation: typing 1.5s steps(25) forwards, blink 0.8s ease infinite;
 }
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
 
 /* styling img and discription */
 .intro-screen {
-    background: rgb(255, 255, 255);
-    width: 100%;
-    
-    
-    display: flex;
-    flex-direction: row;
-    
-    align-items: end;
-    justify-content: space-around;
-    
-    border: 0.5px solid rgb(208, 208, 208);
-    border-radius: 25px;
+  background: rgb(255, 255, 255);
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: end;
+  justify-content: space-around;
+
+  border: 0.5px solid rgb(208, 208, 208);
+  border-radius: 25px;
 }
 
 .intro-screen .img {
-    width: 50%;
-    padding: 3rem 2rem 0 6rem;
+  width: 50%;
+  padding: 3rem 2rem 0 6rem;
 }
 
 .intro-screen .img #screen-img {
-    height: 30rem;
+  height: 30rem;
 }
 
 .intro-screen .intro-content {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 
-    padding: 20px;
-    padding-bottom: 5rem;
+  padding: 20px;
+  padding-bottom: 5rem;
 }
 
 .intro-content .welcome-msg {
-    width: 90%;
-    font-size: 45px;
-    font-weight: bold;
+  width: 90%;
+  font-size: 45px;
+  font-weight: bold;
 }
 
 .welcome-msg p {
-    margin: 0;
+  margin: 0;
 }
 
 .intro-content .about-myself {
-    width: 80%;
-    font-size: 13px;
+  width: 80%;
+  font-size: 13px;
 
-    border-bottom: 0.5px solid rgb(200, 200, 200);
+  border-bottom: 0.5px solid rgb(200, 200, 200);
 }
 
 /* Styling achievements section. */
 
 .achievements {
-    width: 100%;
+  width: 100%;
 
-    background: #fff;
+  background: #fff;
 
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    
-    border-radius: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 
-    align-items: center;
+  border-radius: 19px;
+
+  align-items: center;
 }
 
 .achievements .achievement-header {
-    width: 95%;
+  width: 95%;
 
-    justify-items: center;
+  justify-items: center;
 }
 
-.achievements .achievement-header h1{
-    margin: 0;
-    padding: 1em 0;
+.achievements .achievement-header h1 {
+  margin: 0;
+  padding: 1em 0;
 
-    font-size: 26px;
-    font-weight: 500;
+  font-size: 26px;
+  font-weight: 500;
 }
 
 .about-achievement {
-    width: 95%;
+  width: 95%;
 
-    font-style: italic;
+  font-style: italic;
 }
 
 .about-achievement p {
-    margin: 0;
+  margin: 0;
 }
 
 .achievements-content {
-    width: 95%;
+  width: 95%;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    gap: 5px;
-    padding: 0 0 1rem 0;
+  gap: 5px;
+  padding: 0 0 1rem 0;
 }
 
 /*  Styling Educations sections*/
 .education-div {
-    width: 100%;
+  width: 100%;
 
-    background: #fff;
+  background: #fff;
 
-    border-radius: 25px;
+  border-radius: 25px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    align-items: center;
+  align-items: center;
 }
 
 .education-div .education-header {
-    width: 95%;
+  width: 95%;
 
-    justify-items: center;
+  justify-items: center;
 }
 
 .education-div .education-header h1 {
-    margin: 0;
-    padding:1em 0;
+  margin: 0;
+  padding: 1em 0;
 
-    font-size: 26px;
-    font-weight: 500;
+  font-size: 26px;
+  font-weight: 500;
 }
 
 .educations {
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 0 0 1em 0;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 0 1em 0;
 }
 
 /* Styling Feedback section. */
 .feedback-div {
-    width: 100%;
+  width: 100%;
 
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
-    justify-content: space-around;
+  justify-content: space-around;
 }
 
 .feedback-content-div {
-    width: 50%;
-    margin: 2rem 0;
+  width: 50%;
+  margin: 2rem 0;
 }
 
 .feedback-head {
-    width: 100%;
+  width: 100%;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .feedback-head h1 {
-    margin:0 1rem 0 2rem;
+  margin: 0 1rem 0 2rem;
 
-    font-size: 40px;
-    font-weight: 400;
+  font-size: 40px;
+  font-weight: 400;
 }
 
 .feedback-content {
-    width: 85%;
+  width: 85%;
 }

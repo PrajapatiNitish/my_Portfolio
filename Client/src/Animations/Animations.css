@@ -1,0 +1,32 @@
+/* Entering animation - It trigger when page load*/
+@keyframes view {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Shrink all link element */
+@keyframes shrink {
+  to {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+}
+
+/* Create typing animation for main section or welcome time */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
