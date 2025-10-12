@@ -15,7 +15,7 @@
 }
 
 .skills-sub-div {
-    width: 95%;
+    width: 90%;
     
     display: flex;
     flex-direction: column;
@@ -30,7 +30,6 @@
 }
 
 .skills-sub-div .skills-content-div {
-    width: 95%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 

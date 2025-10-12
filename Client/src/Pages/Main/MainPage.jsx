@@ -109,17 +109,15 @@ export default function Main() {
               </div>
 
               <div className="intro-content">
-                <div className="welcome-msg">
-                  <p>Hello !</p>
-                </div>
-
                 <div className="about-myself">
                   <p>
-                    I am <b>Nitish Prajapati</b>. You are on my Profolio
-                    Website. You can know about me on this page, about my study,
-                    my achievements and career in programming world. A
-                    transition from Electrical Engg. to Software Devloper and
-                    many more.
+                    <i>
+                      I am <b>Nitish Prajapati</b>. You are on my Profolio
+                      Website. You can know about me on this page, about my
+                      study, my achievements and career in programming world. A
+                      transition from Electrical Engg. to Software Devloper and
+                      many more.
+                    </i>
                   </p>
                 </div>
               </div>
@@ -174,8 +172,7 @@ export default function Main() {
             <div className="feedback-content-div">
               <div className="feedback-head">
                 <h1>
-                  Give me, your valueable feedback. I respect you
-                  thoughts.
+                  Give me, your valueable feedback. I respect you thoughts.
                 </h1>
               </div>
             </div>

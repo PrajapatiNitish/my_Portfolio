@@ -15,7 +15,7 @@
 }
 
 .internship-sub-div {
-  width: 95%;
+  width: 90%;
 
   border-radius: 20px;
 
@@ -28,8 +28,4 @@
 
 .internship-header h2 {
   font-weight: 500;
-}
-
-.internship {
-  width: 95%;
 }

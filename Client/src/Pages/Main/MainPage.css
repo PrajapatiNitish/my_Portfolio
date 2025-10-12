@@ -67,7 +67,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 20px;
 }
 
 .intro-screen .img {

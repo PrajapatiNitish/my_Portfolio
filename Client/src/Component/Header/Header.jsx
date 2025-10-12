@@ -100,6 +100,7 @@ export default function Header() {
               <div className="menu">
                 <div className="header-space" onClick={closeLink}>
                   <NavLink to={"/"}>
+                  <img src="./header-icon.jpg" alt="header-img" />
                     <h1>Nitish Prajapati</h1>
                   </NavLink>
                 </div>
