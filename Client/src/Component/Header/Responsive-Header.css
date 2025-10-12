@@ -79,6 +79,14 @@
     gap: 0.5rem;
   }
 
+  .navigate-link .staggered-link {
+    margin-bottom: 10px;
+
+    opacity: 0;
+    transform: translateY(-25px);
+    animation: view 0.6s ease forwards;
+  }
+
   .navigate-link a {
     color: rgb(22, 22, 22);
     margin-bottom: 1rem;

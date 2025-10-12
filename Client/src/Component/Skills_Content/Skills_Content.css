@@ -19,8 +19,11 @@
 
 .content-header h3 {
     margin: 8px;
+
+    font-weight: 500;
 }
 
 .skills {
     margin: 8px;
+    font-style: italic;
 }

@@ -22,7 +22,7 @@ header {
 }
 
 header .main-section {
-  width: 90%;
+  width: 95%;
   height: 3.5rem;
 
   display: flex;
@@ -35,7 +35,7 @@ header .main-section {
 }
 
 .main-section nav {
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: column;
 

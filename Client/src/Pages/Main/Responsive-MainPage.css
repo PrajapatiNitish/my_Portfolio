@@ -1,41 +1,26 @@
 @media (min-width: 431px) and (max-width: 1024px) {
   /* Styling img and discription. */
   .intro .intro-screen {
-    background-color: inherit;
     flex-direction: column;
 
     gap: 5px;
-
-    border: none;
   }
 
   .intro-screen .img {
-    background: white;
     width: 100%;
     padding: 0;
 
     display: flex;
     justify-content: center;
-
-    border: 0.5px solid rgb(208, 208, 208);
-    border-radius: 25px;
-  }
-
-  .intro-screen .img #screen-img {
-    min-height: 35rem;
-    padding: 3rem 0 0 0;
+    border-radius: 12px;
   }
 
   .intro-screen .intro-content {
-    background: white;
     width: 100%;
     padding: 1rem 0;
     padding-top: 1.5rem;
 
     justify-items: center;
-
-    border: 0.5px solid rgb(208, 208, 208);
-    border-radius: 25px;
   }
 
   .intro-content .welcome-msg {
@@ -72,42 +57,28 @@
 @media (max-width: 430px) {
   /* Styling img and discription. */
   .intro .intro-screen {
-    background-color: inherit;
+    background: white;
     flex-direction: column;
 
     gap: 7px;
 
-    border: none;
+    border-radius: 12px;
   }
 
   .intro-screen .img {
-    background: white;
-    width: 100%;
-    height: fit-content;
     padding: 0;
 
     display: flex;
     justify-content: center;
-
-    border: 0.5px solid rgb(208, 208, 208);
-    border-radius: 25px;
-  }
-
-  .intro-screen .img #screen-img {
-    height: 28rem;
-    padding: 3rem 0 0 0;
   }
 
   .intro-screen .intro-content {
-    background: white;
     width: 100%;
     padding: 1rem 0;
     padding-top: 1.5rem;
 
     align-content: center;
-
-    border: 0.5px solid rgb(208, 208, 208);
-    border-radius: 20px;
+    border-radius: 12px;
   }
 
   .intro-content .welcome-msg {

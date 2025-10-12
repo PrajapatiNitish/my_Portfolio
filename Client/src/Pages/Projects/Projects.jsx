@@ -1,44 +1,55 @@
-import Achievement from '../../Component/Achievement/Achievements';
-import './Projects.css'
+import Achievement from "../../Component/Achievement/Achievements";
+import "./Projects.css";
 
 export default function Projects() {
-    return (
-        <>
-            <div className="project-div">
-                <div className="project-sub-div">
-                    <div className='achievement-header'>
-                        <h2>
-                            Projects - Show your skills and works
-                        </h2>
-                    </div>
+  const achieved = [
+    {
+      head: "Project - 1",
+      content:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis similique vero recusandae voluptas tempora molestiae nobis temporibus dignissimos sint, porro architecto! Quibusdam error velit saepe! Hic sit animi ullam voluptas.",
+      link: "none",
+      linkName: "View Image",
+    },
 
-                    <div className="project">
-                        <Achievement
-                            head={'Projects - 1'}
-                            content={<> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in possimus, corrupti aperiam incidunt vero magni placeat dolorum recusandae, reprehenderit, repellendus cum natus architecto voluptatum eligendi corporis. Libero, alias saepe?</>}
+    {
+      head: "Project - 2",
+      content:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis similique vero recusandae voluptas tempora molestiae nobis temporibus dignissimos sint, porro architecto! Quibusdam error velit saepe! Hic sit animi ullam voluptas.",
+      link: "none",
+      linkName: "View Image",
+    },
 
-                            link={"none"}
-                            linkName={"View"}
-                        />
+    {
+      head: "Project - 3",
+      content:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis similique vero recusandae voluptas tempora molestiae nobis temporibus dignissimos sint, porro architecto! Quibusdam error velit saepe! Hic sit animi ullam voluptas.",
+      link: "none",
+      linkName: "View Image",
+    },
+  ];
 
-                        <Achievement
-                            head={'Projects - 1'}
-                            content={<> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in possimus, corrupti aperiam incidunt vero magni placeat dolorum recusandae, reprehenderit, repellendus cum natus architecto voluptatum eligendi corporis. Libero, alias saepe?</>}
+  return (
+    <>
+      <div className="project-div">
+        <div className="project-sub-div">
+          <div className="project-header">
+            <h2>Projects - Show your skills and works</h2>
+          </div>
 
-                            link={"none"}
-                            linkName={"View"}
-                        />
-
-                        <Achievement
-                            head={'Projects - 1'}
-                            content={<> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in possimus, corrupti aperiam incidunt vero magni placeat dolorum recusandae, reprehenderit, repellendus cum natus architecto voluptatum eligendi corporis. Libero, alias saepe?</>}
-
-                            link={"none"}
-                            linkName={"View"}
-                        />
-                    </div>
-                </div>
-            </div>
-        </>
-    );
+          <div className="project">
+            {achieved.map((achieve) => {
+              return (
+                <Achievement
+                  head={achieve.head}
+                  content={achieve.content}
+                  link={achieve.link}
+                  linkName={achieve.linkName}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

@@ -17,6 +17,7 @@ dist/
 dist-ssr/
 Client/dist/
 Server/dist/
+Client/robots.txt
 
 # Local environments
 *.local

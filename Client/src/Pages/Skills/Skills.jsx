@@ -4,6 +4,60 @@ import './Skills.css'
 import './Responsive-Skills.css'
 
 export default function Skills() {
+    const skills = [
+        {
+            header: "Header - 1",
+            skillName : [
+                {
+                    skill : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi.",
+                },
+
+                {
+                    skill : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi.",
+                },
+            ]
+        },
+
+        {
+            header: "Header - 1",
+            skillName : [
+                {
+                    skill : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi.",
+                },
+
+                {
+                    skill : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi.",
+                },
+            ]
+        },
+
+        {
+            header: "Header - 1",
+            skillName : [
+                {
+                    skill : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi.",
+                },
+
+                {
+                    skill : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi.",
+                },
+            ]
+        },
+
+        {
+            header: "Header - 1",
+            skillName : [
+                {
+                    skill : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi.",
+                },
+
+                {
+                    skill : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi.",
+                },
+            ]
+        },
+    ]
+
     return (
         <>
             <div className="skills-main-div">
@@ -13,57 +67,20 @@ export default function Skills() {
                     </div>
 
                     <div className="skills-content-div">
-                        <SkillsContent 
-                            header={"Header - 1"} 
-                            skillName={[
-                                <SkillsName 
-                                    skill={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi."} 
-                                />,
-                                
-                                <SkillsName 
-                                    skill={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi."} 
-                                />,
-                            ]} 
+                        {skills.map((skill) => {
+                            return (
+                                <SkillsContent 
+                            header={skill.header} 
+                            skillName={skill.skillName.map((skillContent) => {
+                                return (
+                                    <SkillsName 
+                                    skill={skillContent.skill} 
+                                />
+                                );
+                            })} 
                         />
-
-                        <SkillsContent 
-                            header={"Header - 1"} 
-                            skillName={[
-                                <SkillsName 
-                                    skill={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi."} 
-                                />,
-                                
-                                <SkillsName 
-                                    skill={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi."} 
-                                />,
-                            ]} 
-                        />
-
-                        <SkillsContent 
-                            header={"Header - 1"} 
-                            skillName={[
-                                <SkillsName 
-                                    skill={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi."} 
-                                />,
-                                
-                                <SkillsName 
-                                    skill={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi."} 
-                                />,
-                            ]} 
-                        />
-
-                        <SkillsContent 
-                            header={"Header - 1"} 
-                            skillName={[
-                                <SkillsName 
-                                    skill={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi."} 
-                                />,
-                                
-                                <SkillsName 
-                                    skill={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem provident obcaecati, expedita culpa ea modi rerum pariatur maiores distinctio officiis id facere aliquid velit omnis quas adipisci? Quisquam, sequi."} 
-                                />,
-                            ]} 
-                        />
+                            );
+                        })}
                     </div>
                 </div>
             </div>

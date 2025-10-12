@@ -1,7 +1,7 @@
 @import "../../Animations/Animations.css";
 
 main {
-  margin-top: 5rem;
+  margin-top: 4rem;
   width: 100%;
 
   display: flex;
@@ -32,7 +32,6 @@ main {
 /* Styling welcome msg */
 .welcome {
   width: 100%;
-  margin-bottom: 1rem;
 
   display: flex;
 
@@ -56,46 +55,46 @@ main {
   font-weight: 500;
   font-size: 15px;
 
-  border-right: 2px solid rgb(88, 88, 88);
-
   animation: typing 1.5s steps(25) forwards, blink 0.8s ease infinite;
 }
 
 /* styling img and discription */
-.intro-screen {
+.intro .intro-screen {
   background: rgb(255, 255, 255);
   width: 100%;
+  overflow: hidden;
 
   display: flex;
-  flex-direction: row;
-
-  align-items: end;
-  justify-content: space-around;
-
-  border: 0.5px solid rgb(208, 208, 208);
-  border-radius: 25px;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
 }
 
 .intro-screen .img {
-  width: 50%;
-  padding: 3rem 2rem 0 6rem;
+  width: 100%;
+  padding: 10px;
+
+  display: flex;
+
+  overflow: hidden;
 }
 
-.intro-screen .img #screen-img {
-  height: 30rem;
+.img img {
+  width: 100%;
+  height: 100%;
 }
 
 .intro-screen .intro-content {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 
   padding: 20px;
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
 }
 
 .intro-content .welcome-msg {
-  width: 90%;
+  width: 100%;
   font-size: 45px;
   font-weight: bold;
 }
@@ -105,7 +104,7 @@ main {
 }
 
 .intro-content .about-myself {
-  width: 80%;
+  width: 100%;
   font-size: 13px;
 
   border-bottom: 0.5px solid rgb(200, 200, 200);
