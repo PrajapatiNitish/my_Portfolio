@@ -2,23 +2,25 @@ import "./MainPage.css";
 import "./Responsive-MainPage.css";
 import Achievement from "../../Component/Achievement/Achievements";
 import Educations from "../../Component/Education/Education";
-import Form from "../../Component/Form/Form";
+import InputField from "../../Component/Form/Input/Input";
+import Textarea from "../../Component/Form/Textarea/Textarea";
+import Button from "../../Component/Form/Button/Button";
 
-// import axios from "axios";
-// import { useState } from "react";
-// import { useEffect } from "react";
+import axios from "axios";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function Main() {
-  // Fatch data from backend
+  //Fatch data from backend
   // useEffect(() => {
-  //     axios.get('/api/')
-  //         .then((res) => {
-  //             console.log("Data arrived")
-  //         })
-  //         .catch((err) => {
-  //             console.log(err);
-  //         })
-  // })
+  //   axios.get("/api/")
+  //     .then((res) => {
+  //       console.log("Data arrived :", res);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // });
 
   // Create objec of array
   const images = [
@@ -32,45 +34,85 @@ export default function Main() {
   // Achievement objects of array.
   const achieved = [
     {
-      head : "1) 2nd Rank in Drawing (Group-B)",
-      content : "We had to draw the scatch of India's formal law's minister and jurist of India ' Dr. Bhimrao Ramji Ambedkar '. I secured 2nd rank in this competition. This competition was organized by ' Shree Vishwabandhy Library, Bakhri ' in year 2017 on Library's 62th Birth Anniversary.",
-      link : "none",
-      linkName : "View Image",
+      key: 1,
+      head: "1) 2nd Rank in Drawing (Group-B)",
+      content:
+        "We had to draw the scatch of India's formal law's minister and jurist of India ' Dr. Bhimrao Ramji Ambedkar '. I secured 2nd rank in this competition. This competition was organized by ' Shree Vishwabandhy Library, Bakhri ' in year 2017 on Library's 62th Birth Anniversary.",
+      link: "none",
+      linkName: "View Image",
     },
 
     {
-      head : "2) 3rd Rank in Quiz Competition",
-      content : "This competition was organized in year 2018 with consent of hometown's all coaching institutions. Student's selction was based on their class test's marks. Also Institute had boundary to select only 10 students. I got selected for this compition. The questions based on 10th syllabus text book in this quiz and I secured 3rd rank in this competition.",
-      link : "none",
-      linkName : "View Image",
+      key: 2,
+      head: "2) 3rd Rank in Quiz Competition",
+      content:
+        "This competition was organized in year 2018 with consent of hometown's all coaching institutions. Student's selction was based on their class test's marks. Also Institute had boundary to select only 10 students. I got selected for this compition. The questions based on 10th syllabus text book in this quiz and I secured 3rd rank in this competition.",
+      link: "none",
+      linkName: "View Image",
     },
 
     {
-      head : "3) 3rd Rank in Essay Writing (Group-C)",
-      content : "We had to write an essay on ' Side effect of western culture on india '. I secured 3rd rank in this competition. This competition was also organized by ' Shree Vishwabandhy Library, Bakhri ' in year 2022 on Library's 68st Birth Anniversary.",
-      link : "none",
-      linkName : "View Image",
+      key: 3,
+      head: "3) 3rd Rank in Essay Writing (Group-C)",
+      content:
+        "We had to write an essay on ' Side effect of western culture on india '. I secured 3rd rank in this competition. This competition was also organized by ' Shree Vishwabandhy Library, Bakhri ' in year 2022 on Library's 68st Birth Anniversary.",
+      link: "none",
+      linkName: "View Image",
     },
   ];
 
   //Educations objects of arary.
   const educations = [
     {
-      educationHead : "B.Tech in Computer Science & Engineering",
-      educationContent : 
-                  "Pursuing batchlor from Faridabad College of Engineering and Management, Faridabad in from August 2025 to June 2028"
+      key: 1,
+      educationHead: "B.Tech in Computer Science & Engineering",
+      educationContent:
+        "Pursuing batchlor from Faridabad College of Engineering and Management, Faridabad in from August 2025 to June 2028",
     },
 
     {
-      educationHead : "Diploma in Electrical Engineering",
-      educationContent : "Completed from Kameshwar Narayan Singh Government Polytechnic (K.N.S.G.P), Samastipur, Bihar with 7.69 CGPA in 2018-2022",
+      key: 2,
+      educationHead: "Diploma in Electrical Engineering",
+      educationContent:
+        "Completed from Kameshwar Narayan Singh Government Polytechnic (K.N.S.G.P), Samastipur, Bihar with 7.69 CGPA in 2018-2022",
     },
 
     {
-      educationHead : "Matriculation (10th)",
-      educationContent : "Completed from Ayodhya Raj Kumari High School (A.R.K High School), Kumharson, Begusarai, with 62.8% in 2017-2018",
+      key: 3,
+      educationHead: "Matriculation (10th)",
+      educationContent:
+        "Completed from Ayodhya Raj Kumari High School (A.R.K High School), Kumharson, Begusarai, with 62.8% in 2017-2018",
     },
-  ]
+  ];
+
+  // handle form data like username, email, feedback
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    feedback: "",
+  });
+
+  const [isSubmitted, setIsSubmitted] = useState(false); //show paragraph after form submitted.
+
+  const changeValue = (e) => {
+    const { id, value } = e.target; //Extract id and value
+  
+    setFormData((prev) => ({//change id and value on every typing of user.
+      ...prev,
+      [id]: value,
+    }));
+
+  };
+
+  //handle submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+    console.log("Thank for you feedback");
+    console.log(
+      `username : ${formData.username}, email : ${formData.email}, feedback : ${formData.feedback}`
+    );
+  };
 
   return (
     <>
@@ -141,6 +183,7 @@ export default function Main() {
               {achieved.map((achieve) => {
                 return (
                   <Achievement
+                    key={achieve.key}
                     head={achieve.head}
                     content={achieve.content}
                     link={achieve.link}
@@ -160,6 +203,7 @@ export default function Main() {
               {educations.map((education) => {
                 return (
                   <Educations
+                    key={education.key}
                     educationHead={education.educationHead}
                     educationContent={education.educationContent}
                   />
@@ -179,7 +223,36 @@ export default function Main() {
 
             <div className="feedback-content-div">
               <div className="feedback-content">
-                <Form onSubmit={() => console.log("Successful submit.")} />
+                {isSubmitted ? (
+                  <p>Thanks your feedback</p>
+                ) : (
+                  <form action="" onSubmit={handleSubmit}>
+                    <InputField
+                      type={"text"}
+                      placeholder={"Username"}
+                      inputId={"username"}
+                      inputValue={formData.username}
+                      changeInput={changeValue}
+                    />
+
+                    <InputField
+                      type={"email"}
+                      placeholder={"E-mail"}
+                      inputId={"email"}
+                      inputValue={formData.email}
+                      changeInput={changeValue}
+                    />
+
+                    <Textarea
+                      textareaId={"feedback"}
+                      text={"Drop your Feedback"}
+                      textareaValue={formData.feedback}
+                      changeTextarea={changeValue}
+                    />
+
+                    <Button BtnName={"Submit Feedback"} />
+                  </form>
+                )}
               </div>
             </div>
           </div>

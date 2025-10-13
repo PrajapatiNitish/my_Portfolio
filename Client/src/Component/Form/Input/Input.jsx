@@ -1,13 +1,15 @@
 import './Input.css'
 
-function Input({ type, placeholder, id }) {
+function Input({ type, placeholder, inputId, inputValue, changeInput }) {
   return (
     <>
       <input
         type={type}
         placeholder={placeholder}
-        id={id}
+        id={inputId}
         required
+        value={inputValue}
+        onChange={changeInput}
       />
     </>
   )

@@ -227,4 +227,16 @@ main {
 
 .feedback-content {
   width: 85%;
+
+  justify-items: center;
+}
+
+.feedback-content form {
+  width: 100%;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
 }
