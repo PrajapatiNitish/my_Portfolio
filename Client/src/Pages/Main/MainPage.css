@@ -5,6 +5,7 @@ main {
   width: 100%;
 
   display: flex;
+  flex-direction: column;
 
   justify-content: center;
   align-items: center;
@@ -15,10 +16,15 @@ main {
   animation: view 0.5s ease 0.2s forwards;
 }
 
+form label {
+  padding-left: 1.1rem;
+}
+
 .main-content {
   width: 90%;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   gap: 1rem;
   justify-items: center;

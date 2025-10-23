@@ -1,6 +1,14 @@
-import './Input.css'
+import "./Input.css";
 
-function Input({ type, placeholder, inputId, inputValue, changeInput }) {
+function Input({
+  type,
+  placeholder,
+  inputId,
+  inputValue,
+  changeInput,
+  inputMax,
+  inputMin,
+}) {
   return (
     <>
       <input
@@ -10,9 +18,11 @@ function Input({ type, placeholder, inputId, inputValue, changeInput }) {
         required
         value={inputValue}
         onChange={changeInput}
+        max={inputMax}
+        min={inputMin}
       />
     </>
-  )
+  );
 }
 
-export default Input
+export default Input;

@@ -60,7 +60,6 @@ export default function Header() {
     }
 
     setIsBtnClicked(!isBtnClicked);
-    console.log(isBtnClicked);
   };
 
   //Close link div after clicking on any link.
@@ -101,7 +100,7 @@ export default function Header() {
                 <div className="header-space" onClick={closeLink}>
                   <NavLink to={"/"}>
                   <img src="./header-icon.jpg" alt="header-img" />
-                    <h1>Nitish Prajapati</h1>
+                    <h1>{`Nitish Kumar`}</h1>
                   </NavLink>
                 </div>
 

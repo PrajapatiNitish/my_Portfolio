@@ -1,5 +1,9 @@
 @media (min-width: 431px) and (max-width: 1024px) {
   /* Styling img and discription. */
+  .ask-name .name-form-div {
+    width: 50%;
+  }
+
   .intro .intro-screen {
     flex-direction: column;
 
@@ -55,6 +59,10 @@
 }
 
 @media (max-width: 430px) {
+  .ask-name .name-form-div {
+    width: 95%;
+  }
+
   /* Styling img and discription. */
   .intro .intro-screen {
     background: white;

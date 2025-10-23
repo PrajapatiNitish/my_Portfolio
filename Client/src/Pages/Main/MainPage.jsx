@@ -1,3 +1,9 @@
+// import api
+import axios from "axios";
+
+import { useEffect, useState, useRef } from "react";
+
+// import pages and componenet file
 import "./MainPage.css";
 import "./Responsive-MainPage.css";
 import Achievement from "../../Component/Achievement/Achievements";
@@ -6,117 +12,78 @@ import InputField from "../../Component/Form/Input/Input";
 import Textarea from "../../Component/Form/Textarea/Textarea";
 import Button from "../../Component/Form/Button/Button";
 
-import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
+// import data file
+import achieved from "../../TextData/AchievementData"; //Achievements
+import educations from "../../TextData/EducationData"; //Educations
+import images from "../../TextData/ImageData"; //images
 
 export default function Main() {
-  //Fatch data from backend
-  // useEffect(() => {
-  //   axios.get("/api/")
-  //     .then((res) => {
-  //       console.log("Data arrived :", res);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // });
+  const [response, setResponse] = useState("");
+  const sendResponse = useRef();
+  const scrollBehaviour = useRef();
 
-  // Create objec of array
-  const images = [
-    {
-      desktopImage: "github-desk.png",
-      tabletImage: "github-pd.png",
-      mobileImage: "github-mb.jpg",
-    },
-  ];
-
-  // Achievement objects of array.
-  const achieved = [
-    {
-      key: 1,
-      head: "1) 2nd Rank in Drawing (Group-B)",
-      content:
-        "We had to draw the scatch of India's formal law's minister and jurist of India ' Dr. Bhimrao Ramji Ambedkar '. I secured 2nd rank in this competition. This competition was organized by ' Shree Vishwabandhy Library, Bakhri ' in year 2017 on Library's 62th Birth Anniversary.",
-      link: "none",
-      linkName: "View Image",
-    },
-
-    {
-      key: 2,
-      head: "2) 3rd Rank in Quiz Competition",
-      content:
-        "This competition was organized in year 2018 with consent of hometown's all coaching institutions. Student's selction was based on their class test's marks. Also Institute had boundary to select only 10 students. I got selected for this compition. The questions based on 10th syllabus text book in this quiz and I secured 3rd rank in this competition.",
-      link: "none",
-      linkName: "View Image",
-    },
-
-    {
-      key: 3,
-      head: "3) 3rd Rank in Essay Writing (Group-C)",
-      content:
-        "We had to write an essay on ' Side effect of western culture on india '. I secured 3rd rank in this competition. This competition was also organized by ' Shree Vishwabandhy Library, Bakhri ' in year 2022 on Library's 68st Birth Anniversary.",
-      link: "none",
-      linkName: "View Image",
-    },
-  ];
-
-  //Educations objects of arary.
-  const educations = [
-    {
-      key: 1,
-      educationHead: "B.Tech in Computer Science & Engineering",
-      educationContent:
-        "Pursuing batchlor from Faridabad College of Engineering and Management, Faridabad in from August 2025 to June 2028",
-    },
-
-    {
-      key: 2,
-      educationHead: "Diploma in Electrical Engineering",
-      educationContent:
-        "Completed from Kameshwar Narayan Singh Government Polytechnic (K.N.S.G.P), Samastipur, Bihar with 7.69 CGPA in 2018-2022",
-    },
-
-    {
-      key: 3,
-      educationHead: "Matriculation (10th)",
-      educationContent:
-        "Completed from Ayodhya Raj Kumari High School (A.R.K High School), Kumharson, Begusarai, with 62.8% in 2017-2018",
-    },
-  ];
+  //Fetch hapi data from backend
+  useEffect(() => {
+    //recieve data from backend
+    axios
+      .get("/api")
+      .then((res) => {
+        console.log("Conected:", res.data);
+      })
+      .catch((err) => {
+        throw err;
+      });
+  }, []);
 
   // handle form data like username, email, feedback
   const [formData, setFormData] = useState({
     username: "",
-    email: "",
-    feedback: "",
+    useremail: "",
+    userfeedback: "",
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(false); //show paragraph after form submitted.
-
+  // Change value on each typing
   const changeValue = (e) => {
     const { id, value } = e.target; //Extract id and value
-  
-    setFormData((prev) => ({//change id and value on every typing of user.
+
+    setFormData((prev) => ({
+      //change id and value on every typing of user.
       ...prev,
       [id]: value,
     }));
+  };
 
+  // Clear value after submitting form.
+  const handleClear = () => {
+    setFormData({
+      username: "",
+      useremail: "",
+      userfeedback: "",
+    });
   };
 
   //handle submit
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    console.log("Thank for you feedback");
-    console.log(
-      `username : ${formData.username}, email : ${formData.email}, feedback : ${formData.feedback}`
-    );
+
+    try {
+      await axios.post("/api/home-page/formdata", formData).then((res) => {
+        if (res.status === 200) {
+          sendResponse.current.style.color = "green";
+          setResponse(res.data);
+          handleClear();
+        }
+      });
+    } catch (err) {
+      sendResponse.current.style.color = "red";
+      console.log(err)
+      setResponse("Something Error");
+    }
   };
 
   return (
     <>
-      <main>
+      <main ref={scrollBehaviour}>
         <div className="main-content">
           {/* Introduction of myself div section. */}
           <div className="intro">
@@ -154,11 +121,10 @@ export default function Main() {
                 <div className="about-myself">
                   <p>
                     <i>
-                      I am <b>Nitish Prajapati</b>. You are on my Profolio
-                      Website. You can know about me on this page, about my
-                      study, my achievements and career in programming world. A
-                      transition from Electrical Engg. to Software Devloper and
-                      many more.
+                      You are on my Profolio Website. You can know about me on
+                      this page, about my study, my achievements and career in
+                      programming world. A transition from Electrical Engg. to
+                      Software Devloper and many more.
                     </i>
                   </p>
                 </div>
@@ -223,36 +189,40 @@ export default function Main() {
 
             <div className="feedback-content-div">
               <div className="feedback-content">
-                {isSubmitted ? (
-                  <p>Thanks your feedback</p>
-                ) : (
-                  <form action="" onSubmit={handleSubmit}>
-                    <InputField
-                      type={"text"}
-                      placeholder={"Username"}
-                      inputId={"username"}
-                      inputValue={formData.username}
-                      changeInput={changeValue}
-                    />
+                <form action="/api/" method="POST" onSubmit={handleSubmit}>
+                  <InputField
+                    type={"text"}
+                    placeholder={"Full Name"}
+                    inputId={"username"}
+                    inputValue={formData.username}
+                    changeInput={changeValue}
+                    inputMax={30}
+                    inputMin={3}
+                  />
 
-                    <InputField
-                      type={"email"}
-                      placeholder={"E-mail"}
-                      inputId={"email"}
-                      inputValue={formData.email}
-                      changeInput={changeValue}
-                    />
+                  <InputField
+                    type={"email"}
+                    placeholder={"E-mail"}
+                    inputId={"useremail"}
+                    inputValue={formData.useremail}
+                    changeInput={changeValue}
+                    inputMax={30}
+                    inputMin={6}
+                  />
 
-                    <Textarea
-                      textareaId={"feedback"}
-                      text={"Drop your Feedback"}
-                      textareaValue={formData.feedback}
-                      changeTextarea={changeValue}
-                    />
+                  <Textarea
+                    textareaId={"userfeedback"}
+                    text={"Drop your feedback"}
+                    textareaValue={formData.userfeedback}
+                    changeTextarea={changeValue}
+                  />
 
-                    <Button BtnName={"Submit Feedback"} />
-                  </form>
-                )}
+                  <Button BtnName={"Submit Feedback"} onClick={handleClear} />
+                </form>
+
+                <div className="response" ref={sendResponse}>
+                  {response}
+                </div>
               </div>
             </div>
           </div>

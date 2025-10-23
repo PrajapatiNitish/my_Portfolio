@@ -1,73 +1,70 @@
 // Entery point of backend.
 
-
-import express from 'express'; //Data is comming in asynchronise. for synchronise data use require or commonJs.
-import path from 'path';
-import cors from 'cors'; //Resolve the cors policy error
-// import db from './dbConfig/db.js'; // import database connections.
-// import connection from './dbConfig/db.js';
+import express from "express"; //Data is comming in asynchronise. for synchronise data use require or commonJs.
+import path from "path";
+import cors from "cors"; //Resolve the cors policy error
+import connection from "./dbConfig/db.js"; //import database connection
 
 // Build app
 const app = express();
 
-
 app.use(cors()); //Allow other link using cors policy. CORS - Cross origine requests.
+
 app.use(express.json()); //In case if we need to send json data.
 app.use(express.urlencoded({ extended: true })); //Express can understand json fromate data.
 
 // Serve static file
 // app.use(express.static(path.join(__dirname, "client/dist/index.html")));
 
-
 // Server is ready. Entry Point
-app.get('/', (req, res) => {
-    res.send("Welcome in server!");
-});
-
 // App listening
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
-    console.log("Server is Listening...");
-})
+  console.log("Server is running sir...", port);
+});
+
+// Send data on port 8081
+app.get("/", (req, res) => {
+  res.send("Welcome in Server sir!");
+});
+
+app.post("/home-page/formdata", (req, res) => {
+  const { username, useremail, userfeedback } = req.body;
+
+  //Create userId
+  const userId = () => {
+    const name = username.slice(0, 3).toLowerCase();
+    const date = new Date(); //Get current date
+    const year = date.getFullYear(); //Get current year example 2025
+    const dayOfMonth = date.getDate(); //Day of month 1-30 or 31
+    const dayOfWeek = date.getDay(); //Day of week 1-7
+    const monthofYear = date.getMonth() + 1; //To get month 1-12
 
 
-// // Database work
+    return `${name[0]}${dayOfMonth}${dayOfWeek}${name[1]}${monthofYear}${name[2]}${year}`;
+  };
+  
+  const sql = `INSERT INTO feedbackData (userId, name, email, feedback) VALUES (?, ?, ?, ?)`;
+  const values = [userId(), username, useremail, userfeedback];
 
-// // Show all tables in my database.
+  connection.query(sql, values, (err, result) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send("Server Error");
+    }
+  });
 
-// let userId = "admin_check";
-// let userName = "Nitish Prajapati";
-// let userEmail = "adminprajapati@gmail.com";
-// let userFeedback = "Hi, I am your admin Nitish, This message is sending for testing.";
-// let created_at = new Date();
+  return res
+    .status(200)
+    .send("Thanks for feedback, I will definitely work on it.");
+});
 
-// let q = "INSERT INTO feedbackData (userId, name, email, feedback, created_at) VALUES (?, ?, ?, ?, ?)";
 
-// let userData = [userId, userName, userEmail, userFeedback, created_at]
-
-// // let idCheckQ = '';
-
-// try {
-//     db.query(idCheckQ, (error, result) => {
-//         if(error) throw error;
-//         console.log(result)
-//     })
-// } catch(error) {
-//     console.log(error)
-// }
-
-// if (userId == id) {
-//     console.log("Duplicate id found!");
-// } else {
-//     try {
-//         db.query(q, userData, (error, result) => {
-//             if (error) throw error;
-//             console.log(result);
-//             console.log(result.length); // To check how many feedback have been added.
-//         });
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
-
-// connection.end();
+process.on("SIGINT", () => { // Graceful shutdown
+  connection.end((err) => {
+    if (err) {
+      console.log("Error during disconnection:", err.stack);
+    }
+  });
+  process.exit();
+});

@@ -5,7 +5,7 @@ export default function Textarea({ text, textareaId, textareaValue, changeTextar
         <>
             <textarea
                 placeholder={text}
-                maxLength={1000}
+                maxLength={500}
                 minLength={1}
                 id={textareaId}
                 value={textareaValue}
