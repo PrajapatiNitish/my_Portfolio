@@ -1,4 +1,4 @@
-// Create objec of array
+// Create object of array
 const images = [
   {
     desktopImage: "github-desk.png",
