@@ -13,9 +13,9 @@ import Textarea from "../../Component/Form/Textarea/Textarea";
 import Button from "../../Component/Form/Button/Button";
 
 // import data file
-import achieved from "../../TextData/AchievementData"; //Achievements
-import educations from "../../TextData/EducationData"; //Educations
-import images from "../../TextData/ImageData"; //images
+import achieved from "./AchievementData"; //Achievements
+import educations from "./EducationData"; //Educations
+import images from "./ImageData"; //images
 
 export default function Main() {
   const [response, setResponse] = useState("");

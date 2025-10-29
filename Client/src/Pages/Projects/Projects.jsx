@@ -1,10 +1,145 @@
 import "./Projects.css";
 import "./Responsive-Project.css";
-import ProjectData from "../../TextData/ProjectData";
 import Videos from "../../Component/Videos/Video";
 import ToolImage from "../../Component/ToolImages/ToolImage";
 
 export default function Projects() {
+  const videos = [
+    {
+      videoSrc: "./mobile-view.mp4",
+      videoId: "video-1", //use as key also
+      videoLabel: "- mobile view",
+    },
+
+    {
+      videoSrc: "./pad-view.mp4",
+      videoId: "video-2", //use as key also
+      videoLabel: "- Tab and iPad View",
+    },
+
+    {
+      videoSrc: "./desktop-view.mp4",
+      videoId: "video-3", //use as key also
+      videoLabel: "- Desktop View",
+    },
+  ];
+
+  const images = [
+    {
+      service: "frontend-tools",
+      imageClassName: "frontend-tools",
+      imageId: "frontend", //use as key
+      imageLabel: "Frontend Tools",
+      imageLists: [
+        {
+          toolImageclassName: "vanilla-css-image",
+          toolImageId: "vanilla-css",
+          toolImageSrc: "./css-logo.png",
+          toolImageLabel: "Vanilla CSS3",
+        },
+
+        {
+          toolImageclassName: "js-image",
+          toolImageId: "java-script",
+          toolImageSrc: "./js.png",
+          toolImageLabel: "JavaScript",
+        },
+
+        {
+          toolImageclassName: "react-js-image",
+          toolImageId: "react-js",
+          toolImageSrc: "./react-js.svg",
+          toolImageLabel: "React js",
+        },
+
+        {
+          toolImageclassName: "axios-image",
+          toolImageId: "axios",
+          toolImageSrc: "./axios.png",
+          toolImageLabel: "Axios",
+        },
+      ],
+    },
+
+    {
+      service: "backend-tools",
+      imageClassName: "backend-tools",
+      imageId: "backend", //use as key
+      imageLabel: "Backend Tools",
+      imageLists: [
+        {
+          toolImageclassName: "node-js-image",
+          toolImageId: "node-js",
+          toolImageSrc: "./node-js.png",
+          toolImageLabel: "Node js",
+        },
+
+        {
+          toolImageclassName: "express-js-image",
+          toolImageId: "express-js",
+          toolImageSrc: "./express-js.png",
+          toolImageLabel: "Express js",
+        },
+
+        {
+          toolImageclassName: "restfull-api-image",
+          toolImageId: "restfull-api",
+          toolImageSrc: "./rest-api.png",
+          toolImageLabel: "Restfull API",
+        },
+
+        {
+          toolImageclassName: "my-sql-image",
+          toolImageId: "my-sql",
+          toolImageSrc: "./mysql.png",
+          toolImageLabel: "My SQL",
+        },
+      ],
+    },
+
+    {
+      service: "other-tools",
+      imageClassName: "other-tools",
+      imageId: "other", //use as key
+      imageLabel: "Other Tools",
+      imageLists: [
+        {
+          toolImageclassName: "docker-image",
+          toolImageId: "docker",
+          toolImageSrc: "./docker.png",
+          toolImageLabel: "Docker",
+        },
+
+        {
+          toolImageclassName: "git-image",
+          toolImageId: "git",
+          toolImageSrc: "./git.png",
+          toolImageLabel: "Git",
+        },
+
+        {
+          toolImageclassName: "github-image",
+          toolImageId: "github",
+          toolImageSrc: "./github.svg",
+          toolImageLabel: "GitHub",
+        },
+
+        {
+          toolImageclassName: "vercel-image",
+          toolImageId: "vercel",
+          toolImageSrc: "./vercel-logo.png",
+          toolImageLabel: "Vercel",
+        },
+
+        {
+          toolImageclassName: "vscode-image",
+          toolImageId: "vscode",
+          toolImageSrc: "./vscode.png",
+          toolImageLabel: "VS Code",
+        },
+      ],
+    },
+  ];
   return (
     <>
       <div className="project-div">
@@ -18,16 +153,19 @@ export default function Projects() {
               <div className="header">
                 <h3>- Portfolio Website </h3>
                 <p>
-                  Short Desprition - Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Numquam repellendus hic necessitatibus
-                  earum. Deserunt eveniet quo beatae sit soluta perferendis
-                  dolores, doloribus veniam, cumque quisquam corporis eum eos.
-                  Ratione, maiores?
+                  This one is my first full stack project and also my portfolio
+                  website. I have designed and developed this website by myself.
+                  I have optimized this website, so that user can get better
+                  performance and user experience. Website can run smoothly for
+                  all common type of devices which are used by users in these
+                  days either it is desktop, tablet or mobile. I have shown
+                  tools & technologies (that i have used to build my website)
+                  and visuals of my website below.
                 </p>
               </div>
 
               <div className="project-view">
-                {ProjectData.videos.map((video) => {
+                {videos.map((video) => {
                   return (
                     <Videos
                       key={video.videoId}
@@ -46,7 +184,7 @@ export default function Projects() {
                 </div>
 
                 <div className="tools">
-                  {ProjectData.images.map((image) => {
+                  {images.map((image) => {
                     return (
                       <ul className={image.imageClassName} key={image.imageId}>
                         <p>{image.imageLabel}</p>
@@ -64,17 +202,57 @@ export default function Projects() {
                       </ul>
                     );
                   })}
-                  ;
                 </div>
               </div>
 
               <div className="full-descriptions-and-progress">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                dolor ipsam, iusto repellat, deserunt blanditiis sint nisi quasi
-                quas consequatur labore ipsum et harum nobis nulla eius. Sint
-                facilis numquam repellat optio corporis eos autem itaque
-                possimus nihil assumenda consequuntur quae quasi exercitationem,
-                veritatis commodi?
+                I have gained lot of experiences through this project. I told
+                you, I have started to build this website in June 2025, I have
+                created it once but there was a bug come inside code, I didn't
+                understand the bug and also i don't like the ui of previous
+                website. So I decided to re-create it Not from scratch but I
+                have re-used some ui parts and re-write the code in better
+                structure and better readiblity. I have completed it in October
+                2025. During these five months of developing website, I have
+                learned lot of new things and also improved my coding skills. I
+                tell you, priviously I was just taking lecture and do code but
+                wasn't able to code. Infact I wasn't able to create a samll
+                basic website using simple html, css and js, whereas I had
+                learnt html, css, js, react js and backend technologies. That's
+                why I had re-create the website once again and take too much
+                time to create it. Now I know :
+                <br />- how to make our website UI layout.
+                <br />- how to write code so that code will be readable and easy
+                to understand other developers.
+                <br />- how to create svg and how to animate it. As you can see
+                the example in my header menu and footer's up and down arrow
+                icon.
+                <br />- how to read documentations and implement new things.
+                <br />- how to use html element and css properties in better
+                way.
+                <br />- what are the best practices to create a website.
+                <br />
+                <br />
+                Not only this, as I said before, I have learnt react js, Now I
+                know :
+                <br />- how to use react hook,
+                <br />- form handling in react,
+                <br />- how to connect backend with frontend using axios, 
+                <br />- how to
+                use axios to make http requests, 
+                <br />- how to create components and
+                re-use them, 
+                <br />- how to manage state in react using useState and
+                useEffect hooks. 
+                <br />- how to navigate between pages using
+                react-router-dom.
+                <br />
+                <br />Also i faced lot of challenges to writing backend code. Connecting backend to database was bit difficult for me. But after learning and practicing a lot, now I am able to create backend using node js and express js. I have used node js for js environment and express js for creating server, use resful api to handle http requests in backend. I have used mysql database to store data. 
+                <br />
+                <br />I have completed it in October 2025. In these five months, I have also learned new technologies like sass, docker, json file, yaml file and vercel deployment during this project development. But I would like thank chatGPT and openAI for helping me a lot to solve my problems and challenges. If I didn't have chatGPT , Maybe I faced more problems, challenges and It took more time to complete this project.
+                <br />
+                <br />At the the end, I would like to say that, I am very happy to
+                complete this project successfully. This is my first full stack. It increased my experiences, confidence and coding skills. I am very excited to create another website in future using sass, react js and new skills.
               </div>
             </div>
           </div>
