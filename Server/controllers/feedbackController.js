@@ -11,9 +11,10 @@ const postFeedbackData = async (req, res) => {
     const dayOfMonth = date.getDate(); //Day of month 1-30 or 31
     const dayOfWeek = date.getDay(); //Day of week 1-7
     const monthofYear = date.getMonth() + 1; //To get month 1-12
+    const soconds = date.getSeconds(); //Get seconds 0-59
     const randomNum = Math.floor(Math.random() * 1000); //Generate random number between 1-100
 
-    return `${randomNum}${name[0]}${dayOfMonth}${dayOfWeek}${name[1]}${monthofYear}${name[2]}${year}`;
+    return `${randomNum}${name[0]}${dayOfMonth}${dayOfWeek}${name[1]}${monthofYear}${name[2]}${year}${soconds}`;
   };
 
   const sql = `INSERT INTO feedbackData (userId, name, email, feedback) VALUES (?, ?, ?, ?)`;

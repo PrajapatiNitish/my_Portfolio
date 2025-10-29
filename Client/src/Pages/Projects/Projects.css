@@ -3,6 +3,7 @@
 .project-div {
     width: 100%;
     margin-top: 5rem;
+    font-size: 14px;
 
     display: flex;
 
@@ -30,4 +31,39 @@
 
 .project-header h2 {
     font-weight: 500;
+}
+
+.project {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.first-project h3, .tools-header h4{
+    font-weight: 500;
+    margin: 0;
+}
+
+.first-project .project-view {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.show-tools-technologies {
+    display: flex;
+    flex-direction: column;
+}
+
+.show-tools-technologies .tools{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+
+    margin: 0 2rem 0 0;
+}
+
+.show-tools-technologies .tools ul p{
+    margin: 0 0 1rem 0;
 }
