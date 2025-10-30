@@ -1,0 +1,13 @@
+
+@media (max-width: 430px) {
+  .skills-sub-div .skills-content-div {
+    justify-content: start;
+  }
+
+  .skills-sub-div .skills-content-div ul {
+    width: 100%;
+    flex-direction: column;
+
+    gap: 0.5rem;
+  }
+}

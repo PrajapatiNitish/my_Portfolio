@@ -26,7 +26,6 @@ export default function Projects() {
 
   const images = [
     {
-      service: "frontend-tools",
       imageClassName: "frontend-tools",
       imageId: "frontend", //use as key
       imageLabel: "Frontend Tools",
@@ -62,7 +61,6 @@ export default function Projects() {
     },
 
     {
-      service: "backend-tools",
       imageClassName: "backend-tools",
       imageId: "backend", //use as key
       imageLabel: "Backend Tools",
@@ -98,7 +96,6 @@ export default function Projects() {
     },
 
     {
-      service: "other-tools",
       imageClassName: "other-tools",
       imageId: "other", //use as key
       imageLabel: "Other Tools",

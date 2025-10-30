@@ -2,6 +2,7 @@
 
 .internship-div {
   width: 100%;
+  min-height: 70vh;
   margin-top: 3.5rem;
 
   display: flex;
@@ -18,14 +19,49 @@
   width: 90%;
 
   border-radius: 20px;
-
   display: flex;
   flex-direction: column;
 
   align-items: center;
-  justify-content: center;
+  justify-items: center;
 }
 
-.internship-header h2 {
-  font-weight: 500;
+.internship-sub-div .error-msg {
+  font-size: 100px;
+  font-weight: 700;
+  margin: 5rem 0 0 0;
+}
+
+.internship-sub-div .sad-emoji {
+  font-size: 100px;
+  margin: 0 0 2rem 0;
+}
+
+.internship-sub-div .try-msg {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+@media (min-width: 431px) and (max-width: 1024px) {
+  .internship-div {
+    min-height: 50vh;
+  }
+
+  .internship-sub-div .error-msg {
+    font-size: 75px;
+    font-weight: 700;
+    margin: 5rem 0 0 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .internship-div {
+    min-height: 50vh;
+  }
+
+  .internship-sub-div .error-msg {
+    font-size: 45px;
+    font-weight: 700;
+    margin: 5rem 0 0 0;
+  }
 }

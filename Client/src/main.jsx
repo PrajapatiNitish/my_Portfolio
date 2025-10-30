@@ -32,11 +32,6 @@ const router = createBrowserRouter([
         path: "/Internship",
         element: <Internship />,
       },
-
-      {
-        path: "/Issues",
-        element: <Internship />,
-      },
     ],
   },
 ]);

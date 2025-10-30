@@ -1,8 +1,10 @@
 @import '../../Animations/Animations.css';
 
 .skills-main-div {
-    margin-top: 3.5rem;
+    margin-top: 4rem;
     width: 100%;
+
+    font-size: 14px;
 
     display: flex;
 
@@ -26,12 +28,24 @@
 }
 
 .skills-sub-div .skills-header h2{
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .skills-sub-div .skills-content-div {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
-    margin-bottom: 0.5rem;
+    justify-content: space-evenly;
+}
+
+.skills-sub-div .skills-content-div ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    gap: 2.5rem;
+    
+    flex-wrap: wrap;
 }

@@ -8,7 +8,6 @@ export default function Header() {
     { to: "/Skills", label: "Skills", class: "staggered-link" },
     { to: "/Projects", label: "Projects", class: "staggered-link" },
     { to: "/Internship", label: "Internship", class: "staggered-link" },
-    { to: "/Issues", label: "Issues", class: "staggered-link" },
   ];
 
   // set dropdown for small screen view.
@@ -99,7 +98,7 @@ export default function Header() {
               <div className="menu">
                 <div className="header-space" onClick={closeLink}>
                   <NavLink to={"/"}>
-                  <img src="./header-icon.jpg" alt="header-img" />
+                    <img src="./header-icon.jpg" alt="header-img" />
                     <h1>{`Nitish Kumar`}</h1>
                   </NavLink>
                 </div>

@@ -135,7 +135,7 @@ export default function Main() {
           {/* Mini details about my achievement sections. */}
           <div className="achievements">
             <div className="achievement-header">
-              <h1>Achievements - Show The Aura</h1>
+              <h1>Achievements show my performances</h1>
             </div>
 
             <div className="about-achievement">
@@ -162,7 +162,7 @@ export default function Main() {
 
           <div className="education-div">
             <div className="education-header">
-              <h1>Educations - Give you another eye</h1>
+              <h1>Educations</h1>
             </div>
 
             <div className="educations">
