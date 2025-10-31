@@ -11,6 +11,10 @@
 
 .video-container video {
   border-radius: 12px;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+}
+
+.desktop-view {
+  grid-column:-1/1;
 }

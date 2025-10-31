@@ -35,6 +35,7 @@
 
 .project {
     width: 100%;
+    height: min-content;
     display: flex;
     flex-direction: column;
 }
@@ -45,8 +46,12 @@
 }
 
 .first-project .project-view {
+    height: inherit;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 30% 38%;
+
+    align-items: center;
+    justify-content: center;
 }
 
 .show-tools-technologies {

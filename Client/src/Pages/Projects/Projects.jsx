@@ -9,18 +9,21 @@ export default function Projects() {
       videoSrc: "./mobile-view.mp4",
       videoId: "video-1", //use as key also
       videoLabel: "- mobile view",
+      videoClass: "mobile-view"
     },
 
     {
       videoSrc: "./pad-view.mp4",
       videoId: "video-2", //use as key also
       videoLabel: "- Tab and iPad View",
+      videoClass: "tab-view"
     },
 
     {
       videoSrc: "./desktop-view.mp4",
       videoId: "video-3", //use as key also
       videoLabel: "- Desktop View",
+      videoClass: "desktop-view"
     },
   ];
 
@@ -162,6 +165,7 @@ export default function Projects() {
                       key={video.videoId}
                       videoSrc={video.videoSrc}
                       videoId={video.videoId}
+                      videoClass={video.videoClass}
                       videoLabel={video.videoLabel}
                       videoPara={video.videoPara}
                     />
