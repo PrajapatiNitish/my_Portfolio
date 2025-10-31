@@ -33,14 +33,14 @@ export default function Projects() {
         {
           toolImageclassName: "vanilla-css-image",
           toolImageId: "vanilla-css",
-          toolImageSrc: "./css-logo.png",
+          toolImageSrc: "./css-logo.webp",
           toolImageLabel: "Vanilla CSS3",
         },
 
         {
           toolImageclassName: "js-image",
           toolImageId: "java-script",
-          toolImageSrc: "./js.png",
+          toolImageSrc: "./js.webp",
           toolImageLabel: "JavaScript",
         },
 
@@ -54,7 +54,7 @@ export default function Projects() {
         {
           toolImageclassName: "axios-image",
           toolImageId: "axios",
-          toolImageSrc: "./axios.png",
+          toolImageSrc: "./axios.webp",
           toolImageLabel: "Axios",
         },
       ],
@@ -68,20 +68,20 @@ export default function Projects() {
         {
           toolImageclassName: "node-js-image",
           toolImageId: "node-js",
-          toolImageSrc: "./node-js.png",
+          toolImageSrc: "./node-js.webp",
           toolImageLabel: "Node js",
         },
 
         {
           toolImageclassName: "express-js-image",
           toolImageId: "express-js",
-          toolImageSrc: "./express-js.png",
+          toolImageSrc: "./express-js.webp",
           toolImageLabel: "Express js",
         },
 
         {
           toolImageclassName: "restfull-api-image",
-          toolImageId: "restfull-api",
+          toolImageId: "restfull-webp",
           toolImageSrc: "./rest-api.png",
           toolImageLabel: "Restfull API",
         },
@@ -89,7 +89,7 @@ export default function Projects() {
         {
           toolImageclassName: "my-sql-image",
           toolImageId: "my-sql",
-          toolImageSrc: "./mysql.png",
+          toolImageSrc: "./mysql.webp",
           toolImageLabel: "My SQL",
         },
       ],
@@ -100,17 +100,11 @@ export default function Projects() {
       imageId: "other", //use as key
       imageLabel: "Other Tools",
       imageLists: [
-        {
-          toolImageclassName: "docker-image",
-          toolImageId: "docker",
-          toolImageSrc: "./docker.png",
-          toolImageLabel: "Docker",
-        },
 
         {
           toolImageclassName: "git-image",
           toolImageId: "git",
-          toolImageSrc: "./git.png",
+          toolImageSrc: "./git.webp",
           toolImageLabel: "Git",
         },
 
@@ -124,14 +118,14 @@ export default function Projects() {
         {
           toolImageclassName: "vercel-image",
           toolImageId: "vercel",
-          toolImageSrc: "./vercel-logo.png",
+          toolImageSrc: "./vercel-logo.webp",
           toolImageLabel: "Vercel",
         },
 
         {
           toolImageclassName: "vscode-image",
           toolImageId: "vscode",
-          toolImageSrc: "./vscode.png",
+          toolImageSrc: "./vscode.webp",
           toolImageLabel: "VS Code",
         },
       ],

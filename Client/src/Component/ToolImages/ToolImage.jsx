@@ -9,9 +9,14 @@ export default function ToolImage({
   return (
     <>
       <li className={`toolImage-container ${toolImageclassName}`}>
-        <img src={toolImageSrc} alt="tool-image" id={toolImageId} />
+        <img
+          src={toolImageSrc}
+          alt="tool-image"
+          id={toolImageId}
+          fetchPriority="high"
+        />
 
-          <label htmlFor={toolImageId}>{toolImageLabel}</label>
+        <label htmlFor={toolImageId}>{toolImageLabel}</label>
       </li>
     </>
   );

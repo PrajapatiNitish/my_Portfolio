@@ -9,7 +9,7 @@ export default function Videos({
     <>
       <div className="video-container">
         <label htmlFor={videoId}>{videoLabel}</label>
-        <video controls>
+        <video controls preload="metadata">
           <source src={videoSrc} id={videoId} />
         </video>
       </div>

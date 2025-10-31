@@ -27,12 +27,6 @@ export default function Main() {
     //recieve data from backend
     axios
       .get("/api")
-      .then((res) => {
-        console.log("Conected:", res.data);
-      })
-      .catch((err) => {
-        throw err;
-      });
   }, []);
 
   // handle form data like username, email, feedback
@@ -76,7 +70,6 @@ export default function Main() {
       });
     } catch (err) {
       sendResponse.current.style.color = "red";
-      console.log(err)
       setResponse("Something Error");
     }
   };
@@ -90,14 +83,19 @@ export default function Main() {
             {/* Welcome msg card */}
             <div className="welcome">
               <div className="space">
-                <div className="msg">Let's Know about Me and my journey.</div>
+                <div className="msg">
+                  Devloper here, Welcome on my Website.
+                </div>
               </div>
             </div>
 
             {/* For large screen. */}
             <div className="intro-screen">
               <div className="img">
-                <a href="https://github.com/PrajapatiNitish">
+                <a
+                  href="https://github.com/PrajapatiNitish"
+                  fetchPriority="high"
+                >
                   <img
                     src={images.map((img) => {
                       if (window.innerWidth <= 430) {
@@ -113,6 +111,7 @@ export default function Main() {
                       }
                     })}
                     alt="display-img"
+                    fetchPriority="high"
                   />
                 </a>
               </div>
@@ -121,10 +120,10 @@ export default function Main() {
                 <div className="about-myself">
                   <p>
                     <i>
-                      You are on my Profolio Website. You can know about me on
-                      this page, about my study, my achievements and career in
-                      programming world. A transition from Electrical Engg. to
-                      Software Devloper and many more.
+                      You are on my Profolio Website. You can know about me, my
+                      study, my achievements and career in programming world. A
+                      transition from Electrical Engg. to Software Devloper and
+                      many more on this page.
                     </i>
                   </p>
                 </div>

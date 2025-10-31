@@ -98,8 +98,13 @@ export default function Header() {
               <div className="menu">
                 <div className="header-space" onClick={closeLink}>
                   <NavLink to={"/"}>
-                    <img src="./header-icon.jpg" alt="header-img" />
-                    <h1>{`Nitish Kumar`}</h1>
+                    <img
+                      src="./header-icon.webp"
+                      alt="header-img"
+                      decoding="async"
+                      fetchPriority="high"
+                    />
+                    <h1>{`devnitish`}</h1>
                   </NavLink>
                 </div>
 
