@@ -1,0 +1,12 @@
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+Disallow: /node_modules/
+Disallow: /server/
+Disallow: /api/
+Disallow: /src/
+Disallow: /Client/
+Disallow: /Server/
+
+Sitemap: https://yourdomain.com/sitemap.xml
