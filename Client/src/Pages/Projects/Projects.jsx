@@ -8,7 +8,7 @@ export default function Projects() {
     {
       videoSrc: "./mobile-view.mp4",
       videoId: "video-1", //use as key also
-      videoLabel: "- mobile view",
+      videoLabel: "- Mobile View",
       videoClass: "mobile-view"
     },
 

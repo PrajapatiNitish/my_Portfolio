@@ -10,11 +10,13 @@
 }
 
 .video-container video {
-  border-radius: 12px;
   width: 100%;
   height: auto;
+  border-radius: 20px;
+
+  border: 0.5px solid rgb(202, 202, 202);
 }
 
 .desktop-view {
-  grid-column:-1/1;
+  grid-column:1/3;
 }

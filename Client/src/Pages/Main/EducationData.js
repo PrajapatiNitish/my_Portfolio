@@ -5,14 +5,14 @@ const educations = [
     key: 1,
     educationHead: "B.Tech in Computer Science & Engineering",
     educationContent:
-      "Pursuing batchlor from Faridabad College of Engineering and Management, Faridabad in from August 2025 to June 2028",
+      "Pursuing bachelor from Faridabad College of Engineering and Management, Faridabad in Computer science and engineering (CSE) stream since August 2025 to June 2028",
   },
 
   {
     key: 2,
     educationHead: "Diploma in Electrical Engineering",
     educationContent:
-      "Completed from Kameshwar Narayan Singh Government Polytechnic (K.N.S.G.P), Samastipur, Bihar with 7.69 CGPA in 2018-2022",
+      "Completed diploma from Kameshwar Narayan Singh Government Polytechnic (K.N.S.G.P), Samastipur, Bihar in Electrical Enineering (EE) with 7.69 CGPA in 2018-2022",
   },
 
   {

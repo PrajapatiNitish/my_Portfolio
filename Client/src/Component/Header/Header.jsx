@@ -104,7 +104,7 @@ export default function Header() {
                       decoding="async"
                       fetchPriority="high"
                     />
-                    <h1>{`devnitish`}</h1>
+                    <h1>{`devNitish`}</h1>
                   </NavLink>
                 </div>
 
