@@ -1,13 +1,16 @@
 //Entry point of database
 
+import dotenv from "dotenv";
 import mysql from 'mysql2';
+
+dotenv.config();
 
 // Build connection of mysql db with backend
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "@Nitish45",
-  database: "portfolio_db",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
   waitForConnections: true,
 });
 

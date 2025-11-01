@@ -1,20 +1,25 @@
 {
-  "name": "my_protfolio",
+  "name": "my_portfolio",
   "version": "1.0.0",
-  "description": "02W07E25_01P07, Today rebuild my portfolio website.",
-  "main": "index.js",
+  "description": "02W07E25_01P07, Today rebuild my portfolio website. and 31F10R25_11P25, Completed the website work",
+  "main": "Server/server.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm --prefix ./Client start",
+    "server": "npm --prefix ./Server start",
+    "build": "npm --prefix ./Client run build",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PrajapatiNitish/my_Protfolio.git"
+    "url": "git+https://github.com/PrajapatiNitish/my_Portfolio.git"
   },
   "keywords": [],
   "author": "Nitish Prajapati",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PrajapatiNitish/my_Protfolio/issues"
+    "url": "https://github.com/PrajapatiNitish/my_Portfolio/issues"
   },
-  "homepage": "https://github.com/PrajapatiNitish/my_Protfolio#readme"
+  "homepage": "https://github.com/PrajapatiNitish/my_Portfolio#readme"
 }

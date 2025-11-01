@@ -12,7 +12,7 @@ const postFeedbackData = async (req, res) => {
     const dayOfWeek = date.getDay(); //Day of week 1-7
     const monthofYear = date.getMonth() + 1; //To get month 1-12
     const soconds = date.getSeconds(); //Get seconds 0-59
-    const randomNum = Math.floor(Math.random() * 1000); //Generate random number between 1-100
+    const randomNum = Math.floor(Math.random() * 10000); //Generate random number between 1-10000
 
     return `${randomNum}${name[0]}${dayOfMonth}${dayOfWeek}${name[1]}${monthofYear}${name[2]}${year}${soconds}`;
   };

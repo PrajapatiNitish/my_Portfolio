@@ -22,13 +22,6 @@ export default function Main() {
   const sendResponse = useRef();
   const scrollBehaviour = useRef();
 
-  //Fetch hapi data from backend
-  useEffect(() => {
-    //recieve data from backend
-    axios
-      .get("/api")
-  }, []);
-
   // handle form data like username, email, feedback
   const [formData, setFormData] = useState({
     username: "",
