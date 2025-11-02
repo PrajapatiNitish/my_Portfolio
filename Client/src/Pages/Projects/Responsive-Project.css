@@ -6,7 +6,8 @@
 
 @media (max-width: 430px) {
   .first-project .project-view {
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
   }
 
   .first-project .header {
