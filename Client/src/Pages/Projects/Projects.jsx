@@ -85,7 +85,7 @@ export default function Projects() {
         {
           toolImageclassName: "restfull-api-image",
           toolImageId: "restfull-webp",
-          toolImageSrc: "./rest-api.png",
+          toolImageSrc: "./rest-api.webp",
           toolImageLabel: "Restfull API",
         },
 
