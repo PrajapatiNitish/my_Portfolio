@@ -1,7 +1,7 @@
 // import api
 import axios from "axios";
 
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 
 // import pages and componenet file
 import "./MainPage.css";
@@ -18,6 +18,9 @@ import educations from "./EducationData"; //Educations
 import images from "./ImageData"; //images
 
 export default function Main() {
+  
+  const url = import.meta.env.VITE_API_URL;
+
   const [response, setResponse] = useState("");
   const sendResponse = useRef();
   const scrollBehaviour = useRef();
@@ -54,7 +57,7 @@ export default function Main() {
     e.preventDefault();
 
     try {
-      await axios.post("/api/home-page/formdata", formData).then((res) => {
+      await axios.post(`${url}/home-page/formdata`, formData).then((res) => {
         if (res.status === 200) {
           sendResponse.current.style.color = "green";
           setResponse(res.data);
@@ -77,7 +80,7 @@ export default function Main() {
             <div className="welcome">
               <div className="space">
                 <div className="msg">
-                  Devloper here, Welcome on my Website.
+                  Developer here, Welcome on my Website.
                 </div>
               </div>
             </div>
@@ -181,7 +184,7 @@ export default function Main() {
 
             <div className="feedback-content-div">
               <div className="feedback-content">
-                <form action="/api/" method="POST" onSubmit={handleSubmit}>
+                <form action={`${url}/`} method="POST" onSubmit={handleSubmit}>
                   <InputField
                     type={"text"}
                     placeholder={"Full Name"}
