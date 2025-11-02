@@ -1,6 +1,6 @@
 -- Create db in sql.
-CREATE DATABASE IF NOT EXISTS portfolio_db;
-USE portfolio_db;
+CREATE DATABASE IF NOT EXISTS defaultdb;
+USE defaultdb;
 
 -- This is feedback schema.
 
