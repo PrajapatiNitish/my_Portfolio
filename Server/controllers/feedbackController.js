@@ -20,7 +20,7 @@ const postFeedbackData = async (req, res) => {
   const sql = `INSERT INTO feedbackData (userId, name, email, feedback) VALUES (?, ?, ?, ?)`;
   const values = [userId(), username, useremail, userfeedback];
 
-  connection.query(sql, values, (err, result) => {
+  await connection.query(sql, values, (err, result) => {
     if (err) {
       return res.status(500).send("Server Error");
     }
