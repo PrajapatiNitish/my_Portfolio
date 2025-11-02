@@ -80,7 +80,7 @@ export default function Main() {
             <div className="welcome">
               <div className="space">
                 <div className="msg">
-                  Developer here, Welcome on my Website.
+                  Developer here - Welcome
                 </div>
               </div>
             </div>
