@@ -22,13 +22,13 @@ const postFeedbackData = async (req, res) => {
 
   await connection.query(sql, values, (err, result) => {
     if (err) {
-      return res.status(500).send("Server Error");
+      return res.status(500).end();
     }
   });
 
   return res
     .status(200)
-    .send("Thanks for feedback, I will definitely work on it.");
+    .end();
 };
 
 

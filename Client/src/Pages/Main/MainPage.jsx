@@ -18,7 +18,6 @@ import educations from "./EducationData"; //Educations
 import images from "./ImageData"; //images
 
 export default function Main() {
-  
   const url = import.meta.env.VITE_API_URL;
 
   const [response, setResponse] = useState("");
@@ -60,7 +59,7 @@ export default function Main() {
       await axios.post(`${url}/home-page/formdata`, formData).then((res) => {
         if (res.status === 200) {
           sendResponse.current.style.color = "green";
-          setResponse(res.data);
+          setResponse("Thanks for feedback, I will definitely work on it.");
           handleClear();
         }
       });
@@ -79,9 +78,7 @@ export default function Main() {
             {/* Welcome msg card */}
             <div className="welcome">
               <div className="space">
-                <div className="msg">
-                  Hey, Developer here - Welcome to you
-                </div>
+                <div className="msg">Hey, Developer here - Welcome to you</div>
               </div>
             </div>
 
