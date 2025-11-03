@@ -135,7 +135,7 @@ export default function Footer() {
 
           <div className="copyright">
             <p>
-              Copyright © 2025 Nitish Prajapati. All rights reserved | India
+              Copyright © 2025 Nitish Prajapati. All rights reserved
             </p>
           </div>
         </div>
