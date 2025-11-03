@@ -29,7 +29,6 @@ app.use(
     }, //need to add domain url
     methods: ["POST"],
     credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization"],
   })
 ); //Allow other link using cors policy. CORS - Cross origine requests.
 app.use(express.json()); //In case if we need to send json data.
