@@ -1,6 +1,6 @@
 import connection from "../dbConfig/db.js";
 
-const postFeedbackData = async (req, res) => {
+const postFeedbackData = (req, res) => {
   const { username, useremail, userfeedback } = req.body;
 
   //Create userId
@@ -20,7 +20,7 @@ const postFeedbackData = async (req, res) => {
   const sql = `INSERT INTO feedbackData (userId, name, email, feedback) VALUES (?, ?, ?, ?)`;
   const values = [userId(), username, useremail, userfeedback];
 
-  await connection.query(sql, values, (err, result) => {
+  connection.query(sql, values, (err, result) => {
     if (err) {
       return res.status(500).end();
     }

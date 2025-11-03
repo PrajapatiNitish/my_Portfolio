@@ -13,10 +13,11 @@ const app = express();
 const port = process.env.PORT; //This port will be client_url or public url or domain that we are going to buy.
 
 const allowedOrigins = process.env.CLIENT_URL
-  ? process.env.CLIENT_URL.split(",").map((origin) => {
-      origin.trim();
-    })
+  ? process.env.CLIENT_URL.split(",").map((origin) => origin.trim())
   : [];
+
+
+  console.log(allowedOrigins)
 
 app.use(
   cors({
@@ -31,6 +32,7 @@ app.use(
     credentials: true,
   })
 ); //Allow other link using cors policy. CORS - Cross origine requests.
+
 app.use(express.json()); //In case if we need to send json data.
 app.use(express.urlencoded({ extended: true })); //Express can understand json fromate data.
 
