@@ -16,9 +16,6 @@ const allowedOrigins = process.env.CLIENT_URL
   ? process.env.CLIENT_URL.split(",").map((origin) => origin.trim())
   : [];
 
-
-  console.log(allowedOrigins)
-
 app.use(
   cors({
     origin: [(origin, callback) => {
