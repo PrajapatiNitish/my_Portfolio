@@ -21,13 +21,13 @@ const allowedOrigins = process.env.CLIENT_URL
 
 app.use(
   cors({
-    origin: (origin, callback) => {
+    origin: [(origin, callback) => {
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true); //Allow frontend server through cros origin policy
       } else {
         callback(new Error("CORS not allowed"));
       }
-    }, //need to add domain url
+    }], //need to add domain url
     methods: ["POST"],
     credentials: true,
   })
