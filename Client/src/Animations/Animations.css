@@ -30,3 +30,11 @@
     border-color: transparent;
   }
 }
+
+
+/* Loading Animation */
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
