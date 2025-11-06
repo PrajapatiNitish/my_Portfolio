@@ -246,3 +246,14 @@ form label {
 
   align-items: center;
 }
+
+.loader {
+  width: 1rem;
+  height: 1rem;
+
+  border: 2.5px dotted rgb(0, 0, 0);
+  border-radius: 100%;
+  border-top-color: #eaeaea;
+
+  animation: loading 1s linear forwards infinite;
+}

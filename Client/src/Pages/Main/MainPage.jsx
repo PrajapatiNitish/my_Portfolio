@@ -20,6 +20,7 @@ import images from "./ImageData"; //images
 export default function Main() {
   const url = import.meta.env.VITE_API_URL;
 
+  const [showLoader, setShowLoader] = useState(true);
   const [response, setResponse] = useState("");
   const sendResponse = useRef();
   const scrollBehaviour = useRef();
@@ -54,17 +55,20 @@ export default function Main() {
   //handle submit
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setShowLoader(false);
 
     try {
       await axios.post(`${url}/home-page/formdata`, formData).then((res) => {
         if (res.status === 200) {
           sendResponse.current.style.color = "green";
+          setShowLoader(true);
           setResponse("Thanks for feedback, I will definitely work on it.");
           handleClear();
         }
       });
     } catch (err) {
       sendResponse.current.style.color = "red";
+      setShowLoader(true);
       setResponse("Something Error");
     }
   };
@@ -209,12 +213,22 @@ export default function Main() {
                     changeTextarea={changeValue}
                   />
 
-                  <Button BtnName={"Submit Feedback"} onClick={handleClear} />
+                  {showLoader ? (
+                    <>
+                      <Button
+                        BtnName={"Submit Feedback"}
+                        onClick={handleClear}
+                      />
+                    </>
+                  ) : (
+                    <>
+                      <div className="loader"></div>
+                    </>
+                  )}
+                  <div className="response" ref={sendResponse}>
+                    {response}
+                  </div>
                 </form>
-
-                <div className="response" ref={sendResponse}>
-                  {response}
-                </div>
               </div>
             </div>
           </div>
