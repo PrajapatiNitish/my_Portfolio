@@ -1,6 +1,6 @@
 {
   "name": "my_portfolio",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "02W07E25_01P07, Today rebuild my portfolio website. and 31F10R25_11P25, Completed the website work",
   "main": "Server/server.js",
   "private": true,
